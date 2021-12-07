@@ -19,7 +19,7 @@ declare const _default: {
 	unshift(...items: any[]): number
 	indexOf(searchElement: any, fromIndex?: number | undefined): number
 	lastIndexOf(searchElement: any, fromIndex?: number | undefined): number
-	every<S>(
+	every<S extends any>(
 		predicate: (value: any, index: number, array: any[]) => value is S,
 		thisArg?: any
 	): this is S[]
@@ -39,7 +39,7 @@ declare const _default: {
 		callbackfn: (value: any, index: number, array: any[]) => U,
 		thisArg?: any
 	): U[]
-	filter<S_1>(
+	filter<S_1 extends any>(
 		predicate: (value: any, index: number, array: any[]) => value is S_1,
 		thisArg?: any
 	): S_1[]
@@ -99,7 +99,7 @@ declare const _default: {
 		) => U_2,
 		initialValue: U_2
 	): U_2
-	find<S_2>(
+	find<S_2 extends any>(
 		predicate: (
 			this: void,
 			value: any,

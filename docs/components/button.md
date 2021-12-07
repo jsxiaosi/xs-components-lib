@@ -1,7 +1,7 @@
 # button 文档
 
 <script setup>
-import IButton from '../../packages/button'
+import IButton from '../../packages/components/button'
 
 </script>
 <IButton/>
