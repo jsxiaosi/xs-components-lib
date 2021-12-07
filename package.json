@@ -1,9 +1,10 @@
 {
-	"name": "vue3-admin-components",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"workspaces": [
+		"packages/*",
+		"docs"
+	],
 	"scripts": {
+		"ct": "bash ./script/template.sh",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"register:components": "vitepress-rc",
 		"docs:dev": "vitepress dev docs",
