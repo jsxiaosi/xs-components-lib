@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# 脚本文件，运行 npm run ct $NAME 一键创建组件
+
 NAME=$1
 
 # 打印组件目录的完整地址
@@ -12,20 +14,20 @@ if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
 fi
 
 # 拼接组件存放路径
-DIRNAME="$FILE_PATH/components/$NAME"
+FILENAME="$FILE_PATH/components/$NAME"
 
 # 判断此路径是否有想同的组件
-if [ -d "$DIRNAME" ]; then
+if [ -d "$FILENAME" ]; then
   echo -e "\033[0;31m[ERROR] $NAME 已经存在相同的组件 \033[0m"
   exit 1
 fi
 
 # 生成组件目录
-mkdir -p "$DIRNAME"
-mkdir -p "$DIRNAME/src"
+mkdir -p "$FILENAME"
+mkdir -p "$FILENAME/src"
 
 # 生成文件.vue 并写入模板
-cat > $DIRNAME/src/index.vue <<EOF
+cat > $FILENAME/src/index.vue <<EOF
 <template>
   <div>
   </div>
@@ -45,7 +47,7 @@ export default defineComponent({
 EOF
 
 # 生成导入模板文件 index.ts
-cat <<EOF >"$DIRNAME/index.ts"
+cat <<EOF >"$FILENAME/index.ts"
 import type { App } from 'vue'
 import ${NAME} from './src/index.vue'
 // import type { SFCWithInstall } from "../types";
