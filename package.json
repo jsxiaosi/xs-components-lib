@@ -5,6 +5,7 @@
 	],
 	"scripts": {
 		"ct": "bash ./script/template.sh",
+		"dev": "cd effect && npm run dev",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"register:components": "vitepress-rc",
 		"docs:dev": "vitepress dev docs",
