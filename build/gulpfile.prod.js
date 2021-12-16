@@ -8,7 +8,7 @@ const {
 	minifontCss,
 	config: { input, output },
 } = require('./gulpfile.base') // 基础方法
-// 编译 LESS
+// 编译 SASS
 const compile = () =>
 	src([
 		`${input}*.scss`,
