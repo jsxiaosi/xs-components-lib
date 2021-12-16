@@ -35,7 +35,7 @@ cat > $FILENAME/src/index.vue <<EOF
 <script lang='ts'>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'I${NAME}',
+  name: '${NAME}',
   props: { },
   setup(props) {
     // init here
@@ -50,9 +50,7 @@ EOF
 cat <<EOF >"$FILENAME/index.ts"
 import type { App } from 'vue'
 import ${NAME} from './src/index.vue'
-// import type { SFCWithInstall } from "../types";
-
-type SFCWithInstall<T> = T | { install(app: App): void } // vue 安装
+import type { SFCWithInstall } from "../types";
 
 ${NAME}.install = (app: App) => {
 	app.component(${NAME}.name, ${NAME})
@@ -60,4 +58,19 @@ ${NAME}.install = (app: App) => {
 
 const _${NAME}: SFCWithInstall<typeof ${NAME}> = ${NAME} // 增加类型
 export default _${NAME}
+EOF
+
+# 获取docs目录路径
+DOCS_FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../docs/components" && pwd)
+
+# 生成导入模板文件 \${name}.md
+cat <<EOF >"$DOCS_FILE_PATH/${NAME}.md"
+# ${NAME} 文档
+
+<script setup>
+import ${NAME} from '../../packages/components/${NAME}'
+
+</script>
+<${NAME}/>
+这个是一个${NAME}组件
 EOF
