@@ -1,9 +1,19 @@
 {
 	"name": "xiaosi-vue3-components",
-	"version": "1.0.0",
-	"main": "lib/index.esm.js",
-	"types": "lib/index.d.ts",
-	"style": "lib/theme-default/index.css",
+	"version": "1.0.1",
+	"files": [
+		"lib"
+	],
+	"main": "./lib/index.esm.js",
+	"module": "./lib/index.esm.js",
+	"types": "./lib/index.d.ts",
+	"style": "./lib/theme-default/index.css",
+	"exports": {
+		".": {
+			"import": "./lib/index.esm.js",
+			"require": "./lib/index.esm.js"
+		}
+	},
 	"workspaces": [
 		"packages/*",
 		"docs"
