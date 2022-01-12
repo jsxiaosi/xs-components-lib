@@ -27,7 +27,7 @@ const config = readdirSync(input)
 		output: {
 			name: 'index',
 			file: `${output}/${name}/index.js`,
-			format: 'es',
+			format: 'umd',
 		},
 	}))
 config.push({
