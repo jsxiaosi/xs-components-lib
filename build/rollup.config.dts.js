@@ -4,7 +4,7 @@ import typescript from 'rollup-plugin-typescript2'
 import vue from 'rollup-plugin-vue' // 处理vue文件
 import { resolve } from 'path'
 const input = resolve(__dirname, '../packages/components') // 入口文件
-const output = resolve(__dirname, '../lib/components') // 输出文件
+const output = resolve(__dirname, '../lib') // 输出文件
 const config = [
 	{
 		input: `${input}/index.ts`,

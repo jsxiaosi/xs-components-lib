@@ -4,7 +4,7 @@ import vue from 'rollup-plugin-vue' // 处理vue文件
 import { readdirSync } from 'fs' // 写文件
 import { resolve } from 'path'
 const input = resolve(__dirname, '../packages/components') // 入口文件
-const output = resolve(__dirname, '../lib/components') // 输出文件
+const output = resolve(__dirname, '../lib') // 输出文件
 const config = readdirSync(input)
 	.filter((name) => !['theme-default', 'index.ts', 'types.ts'].includes(name)) //过滤当前目录下的目录和文件
 	.map((name) => ({
