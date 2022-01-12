@@ -28,6 +28,9 @@ const config = readdirSync(input)
 			name: 'index',
 			file: `${output}/${name}/index.js`,
 			format: 'umd',
+			globals: {
+				vue: 'vue', // 指明 global.vue 即是外部依赖 vue
+			},
 		},
 	}))
 config.push({
