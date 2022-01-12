@@ -1,4 +1,9 @@
 {
+	"name": "xiaosi-vue3-components",
+	"version": "1.0.0",
+	"main": "lib/index.esm.js",
+	"types": "lib/index.d.ts",
+	"style": "lib/theme-default/index.css",
 	"workspaces": [
 		"packages/*",
 		"docs"
