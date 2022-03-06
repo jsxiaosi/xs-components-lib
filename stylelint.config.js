@@ -1,7 +1,7 @@
 module.exports = {
 	plugins: ['stylelint-scss', 'stylelint-order'],
-
-	extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
+	customSyntax: 'postcss-html',
+	extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
 	rules: {
 		indentation: 2, // 缩进2个空格
 		'at-rule-no-unknown': [
@@ -24,5 +24,5 @@ module.exports = {
 		'scss/comment-no-loud': true, // 禁止使用/*注释
 		'scss/comment-no-empty': true, // 禁止空注释
 	},
-	ignoreFiles: ['**/*.js'],
+	ignoreFiles: ['**/*.js', '**/*.ts'],
 }

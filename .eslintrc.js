@@ -20,14 +20,14 @@ module.exports = {
 	],
 	parser: 'vue-eslint-parser',
 	parserOptions: {
-		ecmaVersion: 2016,
+		ecmaVersion: 2020,
 		parser: '@typescript-eslint/parser',
-		// 对Babel解析器的包装使其与 ESLint 兼容。
-		// parser: 'babel-eslint',
-		// 代码是 ECMAScript 模块
 		sourceType: 'module',
+		ecmaFeatures: {
+			jsx: true,
+		},
 	},
-	plugins: ['vue'],
+	// plugins: ['vue'],
 	rules: {
 		// 'prettier/prettier': 'error',
 		// 是否禁止使用any类型
@@ -40,12 +40,20 @@ module.exports = {
 		'@typescript-eslint/no-empty-function': 'off',
 		// 是否禁止使用特定类型
 		'@typescript-eslint/ban-types': 'off',
+		// 是否不允许向模板添加多个根节点
 		'vue/no-multiple-template-root': 'off',
 		camelcase: 0,
 		'vue/component-tags-order': [
 			'error',
 			{
 				order: ['template', 'script', 'style'],
+			},
+		],
+		// 是否要求组件名称始终为多字
+		'vue/multi-word-component-names': [
+			'error',
+			{
+				ignores: ['index'],
 			},
 		],
 		'@typescript-eslint/no-unused-vars': [

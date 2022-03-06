@@ -1,1 +1,5 @@
+---
+sidebar: false
+---
+
 # Hello VitePress
