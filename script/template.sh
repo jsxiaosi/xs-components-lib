@@ -50,7 +50,7 @@ EOF
 cat <<EOF >"$FILENAME/index.ts"
 import type { App } from 'vue'
 import ${NAME} from './src/index.vue'
-import type { SFCWithInstall } from "../types";
+import type { SFCWithInstall } from "../../types";
 
 ${NAME}.install = (app: App) => {
 	app.component(${NAME}.name, ${NAME})

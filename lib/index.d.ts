@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import IButton from './button'
+import IButton from './components/button'
 export { IButton }
 declare const _default: {
 	length: number
@@ -135,6 +135,7 @@ declare const _default: {
 		this: A,
 		depth?: D | undefined
 	): FlatArray<A, D>[]
+	at(index: number): any
 	[Symbol.iterator](): IterableIterator<any>
 	[Symbol.unscopables](): {
 		copyWithin: boolean

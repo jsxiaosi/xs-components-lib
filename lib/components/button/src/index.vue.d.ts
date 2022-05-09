@@ -17,11 +17,13 @@ declare const _default: import('vue').DefineComponent<
 		import('vue').ComponentCustomProps,
 	| readonly string[]
 	| Readonly<
-			{
-				[x: string]: unknown
-			} & {} & {
-				[x: string]: import('vue').Prop<unknown, unknown> | null | undefined
-			}
+			import('vue').ExtractPropTypes<
+				Readonly<
+					import('vue').ComponentObjectPropsOptions<{
+						[x: string]: unknown
+					}>
+				>
+			>
 	  >,
 	| {
 			[x: number]: string

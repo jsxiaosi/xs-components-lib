@@ -1,6 +1,6 @@
 import type { App } from 'vue'
 
-import IButton from './button'
+import IButton from './components/button'
 
 const components: any[] = [IButton]
 /**

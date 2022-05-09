@@ -1,6 +1,6 @@
 import type { App } from 'vue'
 import IButton from './src/index.vue'
-import type { SFCWithInstall } from '../types'
+import type { SFCWithInstall } from '../../types'
 
 IButton.install = (app: App) => {
 	app.component(IButton.name, IButton)

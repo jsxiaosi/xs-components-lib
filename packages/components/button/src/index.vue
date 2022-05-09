@@ -1,5 +1,5 @@
 <template>
-	<button>这个是一个自定义组件来的</button>
+	<button class="mu_Button">这个是一个自定义组件来的</button>
 </template>
 
 <script lang="ts">
