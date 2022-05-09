@@ -105,13 +105,17 @@ npm run commit
 ├── README.md
 ├── build
 ├── commitlint.config.js
-├── docs                                // vitepress文档目录
-├── effect                              // 调试模板
+├── docs                                # vitepress文档目录
+├── effect                              # 调试模板
 ├── lib
 ├── node_modules
 ├── package-lock.json
 ├── package.json
-├── packages                            // 组件目录
+├── packages                            # 公共组件目录
+│   ├── components                      # 组件存放目录
+│   ├── hooks                           # hooks存放目录
+│   ├── theme-default                   # 组件样式存放目录
+│   ├── utils                           # 公共方法存放目录
 ├── postcss.config.js
 ├── prettier.config.js
 ├── script

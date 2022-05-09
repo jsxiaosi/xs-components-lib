@@ -1,6 +1,6 @@
 {
 	"name": "xiaosi-vue3-components",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"files": [
 		"lib"
 	],
@@ -12,7 +12,8 @@
 		".": {
 			"import": "./lib/index.esm.js",
 			"require": "./lib/index.js"
-		}
+		},
+		"./*": "./*"
 	},
 	"workspaces": [
 		"packages/*",
