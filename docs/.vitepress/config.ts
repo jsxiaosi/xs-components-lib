@@ -1,6 +1,22 @@
-module.exports = {
+import type { UserConfig } from 'vitepress'
+
+function getDemoSidebar() {
+	return [
+		{
+			text: '组件',
+			children: [
+				{
+					text: 'buttom',
+					link: '/components/button',
+				},
+			],
+		},
+	]
+}
+
+const config: UserConfig = {
 	lang: 'zh-CN',
-	title: 'vue3',
+	title: 'XiaoSiComponents',
 	description: 'Just playing around.',
 	themeConfig: {
 		// 展示搜索框
@@ -22,7 +38,7 @@ module.exports = {
 			},
 			{
 				text: 'GitHub',
-				link: 'https://github.com/lxKylin/vitepressdemo',
+				link: 'https://github.com/SuperCuteXiaoSi/xiaosiCommitLib',
 			},
 		],
 		// 侧边栏
@@ -38,16 +54,4 @@ module.exports = {
 	},
 }
 
-function getDemoSidebar() {
-	return [
-		{
-			text: '组件',
-			children: [
-				{
-					text: 'buttom',
-					link: '/components/button',
-				},
-			],
-		},
-	]
-}
+export default config

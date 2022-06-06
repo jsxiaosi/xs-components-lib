@@ -4,8 +4,8 @@
 	"scripts": {
 		"dev": "vitepress dev ."
 	},
-	"dependencies": {},
 	"devDependencies": {
-		"vitepress": "0.21.4"
+		"vitepress": "0.21.4",
+		"vitepress-theme-demoblock": "^1.4.2"
 	}
 }

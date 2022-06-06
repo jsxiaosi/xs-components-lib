@@ -2,4 +2,4 @@
 sidebar: false
 ---
 
-# Hello VitePress
+# Hello XiaoSiComponents

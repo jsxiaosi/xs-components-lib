@@ -1,0 +1,7 @@
+{
+	"extends": "@vue/tsconfig/tsconfig.web.json",
+	"compilerOptions": {
+		"types": ["../typings/vue-shim"]
+	},
+	"include": ["**/*", ".vitepress/**/*"]
+}

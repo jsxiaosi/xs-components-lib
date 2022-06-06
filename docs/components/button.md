@@ -1,8 +1,9 @@
 # button 文档
 
-<script setup>
-import IButton from '../../packages/components/button'
+:::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 
-</script>
-<IButton/>
-这个是一个按钮来的对吧？
+```vue
+<template>
+	<IButton>超级简单的按钮实例</IButton>
+</template>
+```
