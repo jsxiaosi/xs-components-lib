@@ -23,9 +23,9 @@
 - 获取项目代码（https or ssh）
 
 ```bash
-git clone https://github.com/SuperCuteXiaoSi/xiaosiCommitLib.git
+git clone https://github.com/jsxiaosi/xiaosiCommitLib.git
 
-git clone git@github.com:SuperCuteXiaoSi/xiaosiCommitLib.git
+git clone git@github.com:jsxiaosi/xiaosiCommitLib.git
 ```
 
 - 安装依赖
@@ -126,8 +126,8 @@ npm run commit
 
 ## 维护者
 
-[@SuperCuteXiaoSi](https://github.com/SuperCuteXiaoSi)
+[@jsxiaosi](https://github.com/jsxiaosi)
 
 ## License
 
-[MIT © 2021](./LICENSE)
+[MIT © 2022](./LICENSE)
