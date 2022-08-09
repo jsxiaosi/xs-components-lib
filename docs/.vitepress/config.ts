@@ -4,10 +4,14 @@ function getDemoSidebar() {
 	return [
 		{
 			text: '组件',
-			children: [
+			items: [
 				{
 					text: 'buttom',
 					link: '/components/button',
+				},
+				{
+					text: 'admin',
+					link: '/components/admin',
 				},
 			],
 		},
@@ -19,6 +23,7 @@ const config: UserConfig = {
 	title: 'XiaoSiComponents',
 	description: 'Just playing around.',
 	themeConfig: {
+		logo: '/logo2.png',
 		// 展示搜索框
 		algolia: {
 			appKey: '',
@@ -35,6 +40,7 @@ const config: UserConfig = {
 			{
 				text: '组件',
 				link: '/components/button',
+				activeMatch: '/components/',
 			},
 			{
 				text: 'GitHub',

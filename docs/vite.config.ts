@@ -1,5 +1,5 @@
 import path from 'path'
-import { UserConfig, ConfigEnv } from 'vite'
+import type { UserConfig, ConfigEnv } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 
 export default (configEnv: ConfigEnv): UserConfig => {
