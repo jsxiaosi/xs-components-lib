@@ -25,7 +25,7 @@ module.exports = {
 			value: 'refactor',
 			name: 'refactor:  重构（既不是增加feature）,也不是修复bug',
 		},
-		{ emoji: '💡', value: 'pref', name: 'pref:      性能优化' },
+		{ emoji: '💡', value: 'perf', name: 'perf:      性能优化' },
 		{
 			emoji: '🤖',
 			value: 'chore',
