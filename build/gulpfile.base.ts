@@ -1,5 +1,7 @@
 import gulp from 'gulp'
-import gulpCssmin from 'gulp-cssmin'
+import cleanCSS from 'gulp-clean-css'
+import consola from 'consola'
+import chalk from 'chalk'
 import { deleteSync } from 'del'
 
 // 打包配置
@@ -18,7 +20,15 @@ export const copyfont = () =>
 export const minifontCss = () =>
 	gulp
 		.src(`${config.input}fonts/*.css`)
-		.pipe(gulpCssmin())
+		.pipe(
+			cleanCSS({}, (details) => {
+				consola.success(
+					`${chalk.cyan(details.name)}: ${chalk.yellow(
+						details.stats.originalSize / 1000
+					)} KB -> ${chalk.green(details.stats.minifiedSize / 1000)} KB`
+				)
+			})
+		)
 		.pipe(gulp.dest(`${config.output}/fonts`))
 
 // 删除之前css打包文件

@@ -1,6 +1,8 @@
 import { src, dest, series, parallel } from 'gulp'
 import autoprefixer from 'gulp-autoprefixer'
-import cssmin from 'gulp-cssmin'
+import cleanCSS from 'gulp-clean-css'
+import consola from 'consola'
+import chalk from 'chalk'
 import postcss from 'gulp-postcss'
 import pxtorem from 'postcss-pxtorem'
 
@@ -28,7 +30,15 @@ const compile = () =>
 				}),
 			])
 		)
-		.pipe(cssmin())
+		.pipe(
+			cleanCSS({}, (details) => {
+				consola.success(
+					`${chalk.cyan(details.name)}: ${chalk.yellow(
+						details.stats.originalSize / 1000
+					)} KB -> ${chalk.green(details.stats.minifiedSize / 1000)} KB`
+				)
+			})
+		)
 		.pipe(dest(config.output))
 
 export default series(clean, parallel(compile, copyfont, minifontCss))
