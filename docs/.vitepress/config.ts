@@ -1,5 +1,7 @@
 import type { UserConfig } from 'vitepress'
 
+import { mdPlugin } from './config/plugins'
+
 function getDemoSidebar() {
 	return [
 		{
@@ -53,10 +55,11 @@ const config: UserConfig = {
 		},
 	},
 	markdown: {
-		config: (md) => {
-			const { demoBlockPlugin } = require('vitepress-theme-demoblock')
-			md.use(demoBlockPlugin)
-		},
+		config: (md: markdownit) => mdPlugin(md),
+		// config: (md) => {
+		// 	// const { demoBlockPlugin } = require('vitepress-theme-demoblock')
+		// 	// md.use(demoBlockPlugin)
+		// },
 	},
 }
 

@@ -15,7 +15,6 @@ module.exports = {
 	extends: [
 		'plugin:vue/vue3-recommended',
 		'plugin:@typescript-eslint/recommended',
-		'prettier',
 		'plugin:prettier/recommended',
 	],
 	parser: 'vue-eslint-parser',
@@ -27,9 +26,9 @@ module.exports = {
 			jsx: true,
 		},
 	},
-	// plugins: ['vue'],
+	plugins: ['vue'],
 	rules: {
-		// 'prettier/prettier': 'error',
+		'prettier/prettier': 'error',
 		// 是否禁止使用any类型
 		'@typescript-eslint/no-explicit-any': 'off',
 		// 是否开启函数必须要指定类型
@@ -50,12 +49,7 @@ module.exports = {
 			},
 		],
 		// 是否要求组件名称始终为多字
-		'vue/multi-word-component-names': [
-			'error',
-			{
-				ignores: ['index'],
-			},
-		],
+		'vue/multi-word-component-names': 'off',
 		'@typescript-eslint/no-unused-vars': [
 			'error',
 			{

@@ -1,7 +1,22 @@
 {
 	"extends": "@vue/tsconfig/tsconfig.web.json",
 	"compilerOptions": {
-		"types": ["../typings/vue-shim"]
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitAny": false,
+		"skipLibCheck": true,
+		"types": ["../typings/global"],
+		"typeRoots": ["../typings/global"],
+		"paths": {
+			"@xsComponents/*": ["../packages/"],
+			"~/*": ["./.vitepress/"]
+		}
 	},
 	"include": ["**/*", ".vitepress/**/*"]
 }
