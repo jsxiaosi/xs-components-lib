@@ -1,9 +1,4 @@
----
-title: Button
-lang: en-US
----
-
-# Button
+# button 文档
 
 ## button 文档
 

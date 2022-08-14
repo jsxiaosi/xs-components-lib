@@ -1,0 +1,47 @@
+@use 'prism-theme-vars/base.css';
+@use 'prism-theme-vars/marker.css';
+
+html:not(.dark) {
+  --prism-builtin: #3182bd;
+  --prism-comment: #848486;
+  --prism-deleted: #3182bd;
+  --prism-function: #6196cc;
+  --prism-boolean: #c25205;
+  --prism-number: #c25205;
+  --prism-property: #717c11;
+  --prism-punctuation: #a8a9cc;
+  --prism-keyword: #c792ea;
+  --prism-variable: #0b8235;
+  --prism-url-decoration: #67cdcc;
+  --prism-symbol: green;
+  --prism-selector: #0b8235;
+  --code-bg-color: #f5f7fa;
+}
+
+html.dark {
+  --prism-foreground: #d4d4d4;
+  --prism-background: #1e1e1e;
+
+  --prism-namespace: #aaaaaa;
+  --prism-comment: #758575;
+  --prism-namespace: #444444;
+  --prism-string: #ce9178;
+  --prism-punctuation: #d4d4d4;
+  --prism-literal: #36acaa;
+  --prism-keyword: #38a776;
+  --prism-function: #dcdcaa;
+  --prism-deleted: #9a050f;
+  --prism-class: #4ec9b0;
+  --prism-builtin: #d16969;
+  --prism-property: #ce9178;
+  --prism-regex: #ad502b;
+  --code-bg-color: var(--vp-code-block-bg);
+}
+
+code {
+  color: var(--vp-c-text-1) !important;
+}
+
+div[class*='language-'] {
+  background-color: var(--code-bg-color) !important;
+}
