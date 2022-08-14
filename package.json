@@ -27,7 +27,7 @@
     "register:components": "vitepress-rc",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
+    "docs:serve": "vitepress serve docs --port 9581",
     "build": "npm run clean && npm run build:theme && npm run build:package && npm run build:package:dts",
     "build:theme": "gulp --require @esbuild-kit/cjs-loader -f build/gulpfile.prod.ts",
     "build:theme:rem": "gulp --require @esbuild-kit/cjs-loader -f build/gulpfile.rem.ts",
