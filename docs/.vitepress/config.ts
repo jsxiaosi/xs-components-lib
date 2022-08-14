@@ -61,17 +61,6 @@ const config: UserConfig = {
     // 	// md.use(demoBlockPlugin)
     // },
   },
-  vue: {
-    template: {
-      ssr: true,
-      compilerOptions: {
-        directiveTransforms: {
-          props: [],
-          needRuntime: true,
-        },
-      },
-    },
-  },
 };
 
 export default config;

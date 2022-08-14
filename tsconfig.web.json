@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "preserve",
+    "lib": ["ESNext", "Dom"],
+    "types": ["unplugin-vue-define-options"],
+    "skipLibCheck": true
+  },
+  "include": ["packages", "typings/vue-shim.d.ts"],
+  "exclude": ["node_modules", "dist", "*.js", "lib", "build"]
+}

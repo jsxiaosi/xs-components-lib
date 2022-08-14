@@ -1,18 +1,14 @@
 module.exports = {
   root: true,
-  globals: {
-    defineProps: 'readonly',
-    defineEmits: 'readonly',
-    defineExpose: 'readonly',
-    withDefaults: 'readonly',
-  },
   env: {
     es6: true,
     browser: true,
     node: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:vue/vue3-recommended',
+    'plugin:markdown/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
@@ -23,6 +19,11 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
+    },
+  },
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.mjs', '.ts', '.d.ts', '.tsx'] },
     },
   },
   plugins: ['vue'],

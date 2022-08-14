@@ -25,8 +25,10 @@ function getAllDirbyFilename(dir, outDir = null) {
 					nodeResolve(),
 					vue(),
 					typescript({
+						tsconfig: "./tsconfig.web.json",
 						tsconfigOverride: {
 							compilerOptions: {
+								composite:false,
 								declaration: false,
 							},
 							exclude: ['node_modules', 'examples', 'mobile', 'tests'],

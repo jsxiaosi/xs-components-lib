@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.web.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": "./effect", // 解析非相对模块的基础地址，默认是当前目录
+    "lib": ["ESNext", "DOM"],
+    "paths": {
+      "@xsComponents/*": ["../packages/*"],
+      "@lib/*": ["../lib/*"]
+    }
+  },
+  "include": ["packages", "effect/", "typings/vue-shim.d.ts"],
+  "exclude": ["build", "lib"]
+}
