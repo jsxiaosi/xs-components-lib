@@ -1,11 +1,23 @@
 /dist/*
-.local
-.output.js
-.npmrc
+
 /node_modules/**
+/public/*
+/lib/*
+/build/*
+/bin/*
 
 **/*.svg
 **/*.sh
 
-/public/*
-/lib/*
+*.sh
+*.md
+*.woff
+*.ttf
+*html
+.vscode
+.idea
+.local
+.output.js
+.npmrc
+.husky
+Dockerfile
