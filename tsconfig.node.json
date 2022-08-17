@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["ESNext"],
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "skipLibCheck": true
+  },
+  "include": ["./build"],
+  "exclude": ["dist", "docs", "effect", "packages", "node_modules", "**/*.js"]
+}

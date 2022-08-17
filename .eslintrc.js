@@ -27,6 +27,23 @@ module.exports = {
     },
   },
   plugins: ['vue'],
+  overrides: [
+    {
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.vue'],
+        ecmaVersion: 'latest',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
   rules: {
     'prettier/prettier': 'error',
     // 是否禁止使用any类型

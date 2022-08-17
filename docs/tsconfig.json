@@ -18,5 +18,5 @@
       "~/*": ["./.vitepress/"]
     }
   },
-  "include": ["**/*", ".vitepress/**/*"]
+  "include": ["**/*", ".vitepress/**/*", "../build/paths/index.ts"]
 }

@@ -6,9 +6,9 @@
     "lib": ["ESNext", "DOM"],
     "paths": {
       "@xsComponents/*": ["../packages/*"],
-      "@lib/*": ["../lib/*"]
+      "@dist/*": ["../dist/xsComponents/es/*"]
     }
   },
   "include": ["packages", "effect/", "typings/vue-shim.d.ts"],
-  "exclude": ["build", "lib"]
+  "exclude": ["lib", "build"]
 }

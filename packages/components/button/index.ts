@@ -1,10 +1,12 @@
 import type { App } from 'vue';
-import IButton from './src/index.vue';
+import Button from './src/button.vue';
 import type { SFCWithInstall } from '../../types';
 
-IButton.install = (app: App) => {
-  app.component(IButton.name, IButton);
+Button.install = (app: App) => {
+  app.component(Button.name, Button);
 };
 
-const InMeAccordionItem: SFCWithInstall<typeof IButton> = IButton; // 增加类型
-export default InMeAccordionItem;
+export const IButton: SFCWithInstall<typeof Button> = Button; // 增加类型
+export default IButton;
+
+export * from './src/button.vue';

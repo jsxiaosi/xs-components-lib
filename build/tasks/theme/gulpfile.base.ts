@@ -2,12 +2,13 @@ import gulp from 'gulp'
 import cleanCSS from 'gulp-clean-css'
 import consola from 'consola'
 import chalk from 'chalk'
-import { deleteSync } from 'del'
+import { resolve } from 'path'
+import { epOutput, pkgRoot } from '../../utils/paths'
 
 // 打包配置
 export const config = {
-	input: '../packages/theme-default',
-	output: '../lib/theme-default',
+	input: resolve(pkgRoot, 'theme-default'),
+	output: resolve(epOutput, 'theme-default'),
 }
 
 // 复制字体
@@ -30,12 +31,3 @@ export const minifontCss = () =>
 			})
 		)
 		.pipe(gulp.dest(`${config.output}/fonts`))
-
-// 删除之前css打包文件
-export const clean = (done) => {
-	deleteSync(
-		['*.css', 'fonts'].map((name) => `${config.output}/${name}`),
-		{ force: true }
-	)
-	done()
-}

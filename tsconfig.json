@@ -1,8 +1,17 @@
 {
   "files": [],
-  "references": [{ "path": "./tsconfig.web.json" }, { "path": "./tsconfig.effect.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.web.json"
+    },
+    {
+      "path": "./tsconfig.effect.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
-
 // {
 //   // https://www.tslang.cn/docs/handbook/compiler-options.html
 //   "compilerOptions": {

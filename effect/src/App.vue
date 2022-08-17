@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import { IButton } from '@lib/index';
-  import { useDeveloper } from '@lib/hooks/useDeveloper';
-  import { developFn } from '@lib/utils/myDevelop';
+  import { IButton } from '@dist/components/button';
+  import { useDeveloper } from '@dist/hooks/useDeveloper';
+  import { developFn } from '@dist/utils/myDevelop';
 
   const { num } = useDeveloper();
 
@@ -23,8 +23,6 @@
 </template>
 
 <style>
-  @import '../../lib/theme-default/button.css';
-
   #app {
     margin-top: 60px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
