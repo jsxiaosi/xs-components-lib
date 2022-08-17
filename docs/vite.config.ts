@@ -1,6 +1,7 @@
 import path from 'path';
 import type { UserConfig } from 'vite';
 import Inspect from 'vite-plugin-inspect';
+import DefineOptions from 'unplugin-vue-define-options/vite';
 import { projRoot } from '../build/utils/paths';
 import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 
@@ -14,7 +15,7 @@ export default (): UserConfig => {
           replacement: `${path.resolve(__dirname, './.vitepress')}/`,
         },
         {
-          find: '@xsComponents',
+          find: '@xs-components',
           replacement: `${path.resolve(__dirname, '../packages')}/`,
         },
       ],
@@ -25,6 +26,7 @@ export default (): UserConfig => {
     plugins: [
       Inspect(), // only applies in dev mode
       MarkdownTransform(),
+      DefineOptions(),
     ],
   };
 };

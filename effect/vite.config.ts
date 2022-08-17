@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
-console.log(`${path.resolve(__dirname, '../dist/xsComponents/es')}/`);
+console.log(`${path.resolve(__dirname, '../dist/xs-components/es')}/`);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,10 +17,10 @@ export default defineConfig({
     alias: [
       {
         find: '@dist',
-        replacement: `${path.resolve(__dirname, '../dist/xsComponents/es')}/`,
+        replacement: `${path.resolve(__dirname, '../dist/xs-components/es')}/`,
       },
       {
-        find: '@xsComponents',
+        find: '@xs-components',
         replacement: `${path.resolve(__dirname, '../packages')}/`,
       },
     ],

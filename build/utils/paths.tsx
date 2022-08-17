@@ -8,9 +8,9 @@ export const docRoot = resolve(projRoot, docsDirName)
 
 
 // dist
-export const PKG_NAME = 'xsComponents'
+export const PKG_NAME = 'xs-components'
 export const buildOutput = resolve(projRoot, 'dist')
-// dist/xsComponents
+// dist/xs-components
 export const epOutput = resolve(buildOutput, PKG_NAME)
 export const pkgRoot = resolve(projRoot, 'packages')
 export const epRoot = resolve(pkgRoot, PKG_NAME)

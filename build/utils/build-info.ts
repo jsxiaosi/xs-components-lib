@@ -12,12 +12,12 @@ export interface BuildInfo {
   output: {
     // es
     name: string
-    // dist/xsComponents
+    // dist/xs-components
     path: string
   }
 
   bundle: {
-    // xsComponents/es
+    // xs-components/es
     path: string
   }
 }

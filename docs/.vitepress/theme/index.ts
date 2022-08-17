@@ -5,14 +5,14 @@ import Demo from '~/components/v-demo.vue';
 import '~/styles/vars.css';
 import '~/styles/app.scss';
 
-import XsComponents from '@xsComponents/index';
-import '@xsComponents/theme-default/index.scss';
+import xsComponents from '@xs-components/index';
+import '@xs-components/theme-default/index.scss';
 
 export default <Theme>{
   ...DefaultTheme,
   enhanceApp({ app }) {
     // register global components
-    app.use(XsComponents);
+    app.use(xsComponents);
     app.component('Demo', Demo);
   },
 };

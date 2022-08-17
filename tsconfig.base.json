@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "experimentalDecorators": true,
     "paths": {
-      "@xsComponents/*": ["../packages/"]
+      "@xs-components/*": ["../packages/"]
     }
   }
 }

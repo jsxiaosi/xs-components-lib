@@ -11,10 +11,10 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["../typings/vue-shim"],
+    "types": ["unplugin-vue-define-options/vite"],
     "typeRoots": ["../typings/vue-shim"],
     "paths": {
-      "@xsComponents/*": ["../packages/"],
+      "@xs-components/*": ["../packages/"],
       "~/*": ["./.vitepress/"]
     }
   },
