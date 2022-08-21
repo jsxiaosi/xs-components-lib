@@ -1,0 +1,20 @@
+[
+  {
+    "text": "首页",
+    "link": "/"
+  },
+  {
+    "text": "指南",
+    "link": "/guide/getting-started",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "组件",
+    "link": "/components/button",
+    "activeMatch": "/components/"
+  },
+  {
+    "text": "GitHub",
+    "link": "https://github.com/SuperCuteXiaoSi/xiaosiCommitLib"
+  }
+]

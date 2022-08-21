@@ -1,0 +1,18 @@
+{
+  "/guide/": [
+    {
+      "text": "入门",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "介绍",
+          "link": "introduce"
+        },
+        {
+          "text": "开始",
+          "link": "getting-started"
+        }
+      ]
+    }
+  ]
+}

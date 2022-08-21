@@ -13,14 +13,11 @@ hero:
     alt: Vite
   actions:
     - theme: brand
+      text: 开始使用
+      link: /guide/getting-started
+    - theme: alt
       text: 组件
-      link: /guide/
-    - theme: alt
-      text: hooks
-      link: /hooks/
-    - theme: alt
-      text: utils
-      link: /utils/
+      link: /components/button
     - theme: alt
       text: View on GitHub
       link: https://github.com/vitejs/vite
@@ -34,6 +31,6 @@ features:
     details: 内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题，你的风格由你自己定义
   - icon: 🛠️
     title: 代码块
-    details: 内置代码块解析器，参考element-pushw文档实现代码块解析器，示例和文档内容分离，让你的文档结构更加整洁
+    details: 内置代码块解析器，参考element-push文档实现代码块解析器，示例和文档内容分离，让你的文档结构更加整洁
 ---
 

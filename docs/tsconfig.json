@@ -11,12 +11,14 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["unplugin-vue-define-options/vite"],
-    "typeRoots": ["../typings/vue-shim"],
+    "types": ["unplugin-vue-define-options/vite", "vite/client"],
+    "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
+    "lib": ["esnext", "dom"],
     "paths": {
       "@xs-components/*": ["../packages/"],
-      "~/*": ["./.vitepress/"]
+      "@/*": ["./.vitepress/"]
     }
   },
-  "include": ["**/*", ".vitepress/**/*", "../build/paths/index.ts"]
+  "include": ["**/*", ".vitepress/**/*", "../build/paths/index.ts"],
+  "exclude": ["node_modules", "dist", "**/*.js"]
 }

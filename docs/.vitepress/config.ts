@@ -1,24 +1,9 @@
 import type { UserConfig } from 'vitepress';
 
 import { mdPlugin } from './config/plugins';
+import { sidebar } from './config/pageRoute';
 
-function getDemoSidebar() {
-  return [
-    {
-      text: '组件',
-      items: [
-        {
-          text: 'buttom',
-          link: '/components/button',
-        },
-        {
-          text: 'admin',
-          link: '/components/admin',
-        },
-      ],
-    },
-  ];
-}
+import nav from './router/nav.json';
 
 const config: UserConfig = {
   lang: 'zh-CN',
@@ -34,32 +19,13 @@ const config: UserConfig = {
         faeFilters: ['tags:guide,api'],
       },
     },
-    nav: [
-      {
-        text: '首页',
-        link: '/',
-      },
-      {
-        text: '组件',
-        link: '/components/button',
-        activeMatch: '/components/',
-      },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/SuperCuteXiaoSi/xiaosiCommitLib',
-      },
-    ],
+    // 顶部标题栏
+    nav,
     // 侧边栏
-    sidebar: {
-      '/components/': getDemoSidebar(),
-    },
+    sidebar,
   },
   markdown: {
     config: (md: markdownit) => mdPlugin(md),
-    // config: (md) => {
-    // 	// const { demoBlockPlugin } = require('vitepress-theme-demoblock')
-    // 	// md.use(demoBlockPlugin)
-    // },
   },
 };
 

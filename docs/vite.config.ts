@@ -2,10 +2,8 @@ import path from 'path';
 import type { UserConfig } from 'vite';
 import Inspect from 'vite-plugin-inspect';
 import DefineOptions from 'unplugin-vue-define-options/vite';
-import { projRoot } from '../build/utils/paths';
 import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 
-console.log(projRoot);
 export default (): UserConfig => {
   return {
     resolve: {
