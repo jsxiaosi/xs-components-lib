@@ -23,6 +23,8 @@
     "packages/*",
     "docs"
   ],
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "ct": "bash ./script/template.sh",
     "clean": "rimraf ./lib",
@@ -42,8 +44,6 @@
     "commit": "git-cz",
     "prepare": "husky install"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
@@ -68,7 +68,9 @@
     "consola": "^2.15.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.9.1",
+    "chalk": "^5.0.1",
     "del": "^7.0.0",
+    "esbuild": "^0.15.5",
     "escape-html": "^1.0.3",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
@@ -77,6 +79,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.3.0",
+    "fast-glob": "^3.2.11",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -85,6 +88,7 @@
     "husky": "^8.0.1",
     "kolorist": "^1.5.1",
     "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
     "postcss-html": "^1.5.0",
     "postcss-import": "^14.1.0",
     "postcss-pxtorem": "^6.0.0",

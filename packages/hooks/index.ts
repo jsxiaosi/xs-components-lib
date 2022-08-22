@@ -1,1 +1,1 @@
-export * from './useDeveloper'
+export * from './useDeveloper';
