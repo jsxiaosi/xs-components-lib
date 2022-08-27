@@ -1,0 +1,20 @@
+.
+├── components
+│   └── button.md
+├── example
+│   └── button
+│       └── basic.vue
+├── guide
+│   ├── docs
+│   │   └── add-page.md
+│   ├── getting-started.md
+│   └── introduce.md
+├── index.md
+├── public
+│   ├── logo.png
+│   └── logo2.png
+├── tree.text
+├── tsconfig.json
+└── vite.config.ts
+
+6 directories, 11 files

@@ -1,6 +1,6 @@
 {
   "name": "xs-components",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Vue3 Component Library",
   "keywords": [
     "xs-components",
@@ -17,12 +17,12 @@
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.mjs",
-  "types": "es/*.d.ts",
+  "types": "es/index.d.ts",
   "exports": {
     ".": {
       "require": "./lib/index.js",
       "import": "./es/index.mjs",
-      "types/*": "./es/*.ts"
+      "types/*": "./es/index.ts"
     },
     "./es": "./es/index.mjs",
     "./lib": "./lib/index.js",

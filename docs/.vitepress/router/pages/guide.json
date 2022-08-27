@@ -13,6 +13,16 @@
           "link": "getting-started"
         }
       ]
+    },
+    {
+      "text": "文档（docs）",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "写第一个docs",
+          "link": "docs/add-page"
+        }
+      ]
     }
   ]
 }

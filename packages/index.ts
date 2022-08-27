@@ -18,5 +18,4 @@ export { IButton };
 
 export default {
   install,
-  ...components,
 };
