@@ -10,10 +10,6 @@ import { Project } from 'ts-morph'
 import type { CompilerOptions, SourceFile } from 'ts-morph'
 import { buildOutput, epRoot, pkgRoot, projRoot, PKG_NAME } from '../utils/paths'
 import { excludeFiles } from './modules'
-import { parallel } from 'gulp'
-import type { TaskFunction } from 'gulp'
-import { copy } from 'fs-extra'
-import { buildConfig, Module } from '../utils/build-info'
 
 const TSCONFIG_PATH = path.resolve(projRoot, 'tsconfig.web.json')
 const outDir = path.resolve(buildOutput, 'types')
@@ -149,17 +145,4 @@ function typeCheck(project: Project) {
     consola.error(err)
     throw err
   }
-}
-
-export const withTaskName = <T>(name: string, fn: T) =>
-  Object.assign(fn, { displayName: name })
-
-export const copyTypesDefinitions: TaskFunction = (done) => {
-  const src = path.resolve(buildOutput, 'types', 'packages')
-  const copyTypes = (module: Module) =>
-    withTaskName(`copyTypes:${module}`, () =>
-      copy(src, buildConfig[module].output.path, { recursive: true })
-    )
-
-  return parallel(copyTypes('esm'), copyTypes('cjs'))(done)
 }
