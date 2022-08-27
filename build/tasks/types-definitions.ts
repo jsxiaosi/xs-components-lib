@@ -8,8 +8,9 @@ import chalk from 'chalk'
 import { Project } from 'ts-morph'
 
 import type { CompilerOptions, SourceFile } from 'ts-morph'
-import { buildOutput, epRoot, pkgRoot, projRoot, PKG_NAME } from '../utils/paths'
+import { buildOutput, epRoot, pkgRoot, projRoot, PKG_NAME, epOutput } from '../utils/paths'
 import { excludeFiles } from './modules'
+import { copyFile } from 'fs-extra'
 
 const TSCONFIG_PATH = path.resolve(projRoot, 'tsconfig.web.json')
 const outDir = path.resolve(buildOutput, 'types')
@@ -44,40 +45,44 @@ export const generateTypesDefinitions = async () => {
 
   const tasks = sourceFiles.map(async (sourceFile) => {
     const relativePath = path.relative(pkgRoot, sourceFile.getFilePath())
+
     consola.trace(
       chalk.yellow(
         `Generating definition for file: ${chalk.bold(relativePath)}`
       )
     )
 
-    const emitOutput = sourceFile.getEmitOutput()
-    const emitFiles = emitOutput.getOutputFiles()
-    if (emitFiles.length === 0) {
-      throw new Error(`Emit no file: ${chalk.bold(relativePath)}`)
-    }
+    if (relativePath === 'global.d.ts') {
+      copyFile(sourceFile.getFilePath(), path.join(epOutput, relativePath))
+    } else {
+      const emitOutput = sourceFile.getEmitOutput()
+      const emitFiles = emitOutput.getOutputFiles()
+      if (emitFiles.length === 0) {
+        throw new Error(`Emit no file: ${chalk.bold(relativePath)}`)
+      }
 
-    const subTasks = emitFiles.map(async (outputFile) => {
-      const filepath = outputFile.getFilePath()
+      const subTasks = emitFiles.map(async (outputFile) => {
+        const filepath = outputFile.getFilePath()
 
-      await mkdir(path.dirname(filepath), {
-        recursive: true,
+        await mkdir(path.dirname(filepath), {
+          recursive: true,
+        })
+
+        consola.success(
+          chalk.green(
+            `Definition for file: ${chalk.bold(relativePath)} generated`
+          )
+        )
       })
 
-      consola.success(
-        chalk.green(
-          `Definition for file: ${chalk.bold(relativePath)} generated`
-        )
-      )
-    })
-
-    await Promise.all(subTasks)
+      await Promise.all(subTasks)
+    }
   })
 
   await Promise.all(tasks)
 }
 
 async function addSourceFiles(project: Project) {
-  // project.addSourceFileAtPath(path.resolve(projRoot, 'typings/env.d.ts'))
 
   const globSourceFile = '**/*.{js?(x),ts?(x),vue}'
   const filePaths = excludeFiles(

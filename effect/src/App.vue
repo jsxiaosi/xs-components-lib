@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { IButton } from '@dist/components/button';
+  import { IButton } from '@dist/index';
   import { useDeveloper } from '@dist/hooks/useDeveloper';
   import { developFn } from '@dist/utils/myDevelop';
 
