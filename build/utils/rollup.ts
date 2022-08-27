@@ -22,7 +22,7 @@ export const getPackageDependencies = (
 }
 
 
-export const generateExternal = async (options: { full: boolean }) => {
+export const generateExternal = async () => {
   const { dependencies, devDependencies } = getPackageDependencies(epPackage)
   return [...dependencies, ...devDependencies]
 }

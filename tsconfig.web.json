@@ -5,6 +5,7 @@
     "jsx": "preserve",
     "lib": ["ESNext", "Dom"],
     "types": ["unplugin-vue-define-options"],
+    "typeRoots": ["./node_modules", "./typings"],
     "skipLibCheck": true
   },
   "include": ["packages", "typings/vue-shim.d.ts"],

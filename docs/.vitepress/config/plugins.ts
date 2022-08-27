@@ -4,7 +4,7 @@ import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
 import type Token from 'markdown-it/lib/token';
 import type Renderer from 'markdown-it/lib/renderer';
-import { docRoot } from '../../../build/utils/paths';
+import { projRoot } from '../utils/paths';
 import { red } from 'kolorist';
 import { highlight } from '../utils/highlight';
 
@@ -41,7 +41,7 @@ export const mdPlugin = (md: markdownit) => {
           try {
             // 如果查找不到文件抛出异常
             source = fs.readFileSync(
-              path.resolve(docRoot, 'example', `${sourceFile}.vue`),
+              path.resolve(projRoot, 'example', `${sourceFile}.vue`),
               'utf-8',
             );
           } catch (error) {

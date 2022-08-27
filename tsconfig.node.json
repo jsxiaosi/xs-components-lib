@@ -4,9 +4,9 @@
     "composite": true,
     "lib": ["ESNext"],
     "types": ["node"],
-    "typeRoots": ["./node_modules/@types", "./typings"],
+    "typeRoots": ["./node_modules", "./typings"],
     "skipLibCheck": true
   },
-  "include": ["./build"],
+  "include": ["./build", "typings/vue-shim.d.ts"],
   "exclude": ["dist", "docs", "effect", "packages", "node_modules", "**/*.js"]
 }

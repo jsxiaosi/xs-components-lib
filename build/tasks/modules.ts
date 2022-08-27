@@ -34,6 +34,7 @@ export const buildModules = async () => {
       DefineOptions(),
       vue({
         isProduction: true,
+        customElement:false
       }),
       vueJsx(),
       nodeResolve({
@@ -48,7 +49,7 @@ export const buildModules = async () => {
         },
       }),
     ],
-    external: await generateExternal({ full: false }),
+    external: await generateExternal(),
     treeshake: false,
   })
 

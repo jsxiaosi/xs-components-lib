@@ -1,6 +1,7 @@
 import glob from 'fast-glob';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import { vpRoot } from '../utils/paths';
 
 type Item = {
   text: string;
@@ -10,7 +11,7 @@ type Item = {
 
 const handleSidebars = () => {
   const file = glob.sync('*.json', {
-    cwd: resolve(__dirname, '..', 'router', 'pages'),
+    cwd: resolve(vpRoot, 'router', 'pages'),
     absolute: true,
     objectMode: true,
   });

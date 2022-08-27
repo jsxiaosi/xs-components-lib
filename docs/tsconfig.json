@@ -13,12 +13,12 @@
     "skipLibCheck": true,
     "types": ["unplugin-vue-define-options/vite", "vite/client"],
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
-    "lib": ["esnext", "dom"],
+    "lib": ["WebWorker"],
     "paths": {
       "@xs-components/*": ["../packages/"],
       "@/*": ["./.vitepress/"]
     }
   },
-  "include": ["**/*", ".vitepress/**/*", "../build/paths/index.ts"],
+  "include": ["**/*", ".vitepress/**/*"],
   "exclude": ["node_modules", "dist", "**/*.js"]
 }

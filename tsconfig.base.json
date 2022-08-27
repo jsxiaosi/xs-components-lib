@@ -6,7 +6,6 @@
     "moduleResolution": "node",
     "removeComments": true,
     "noLib": false,
-    "declaration": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
