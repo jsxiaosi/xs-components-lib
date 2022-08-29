@@ -1,6 +1,5 @@
-## 简介
-
-基于`Vue3`,`VitePress`,`ElementPush`, `Rollup`等主流技术开发的组件库模板
+# 组件库模版
+基于`Vue3`,`VitePress`, `Rollup`，`Gulp`等主流技术开发的组件库模板。内置打包组件、hooks、utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题
 
 ## 特性
 
@@ -8,6 +7,7 @@
 - **组件文档**：使用 VitePress 内置文档
 - **支持**：支持 TypeScript，支持按需引入
 - **模板**： 内置指令一键生成开发模板
+- **组件打包**：内置Esm、Commonjs打包模式，支持按需引入
 
 ## 准备
 
@@ -23,9 +23,9 @@
 - 获取项目代码（https or ssh）
 
 ```bash
-git clone https://github.com/jsxiaosi/xiaosiCommitLib.git
+git clone https://github.com/jsxiaosi/xs-components-lib.git
 
-git clone git@github.com:jsxiaosi/xiaosiCommitLib.git
+git clone git@github.com:jsxiaosi/xs-components-lib.git
 ```
 
 - 安装依赖
