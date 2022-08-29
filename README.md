@@ -8,6 +8,7 @@
 - **支持**：支持 TypeScript，支持按需引入
 - **模板**： 内置指令一键生成开发模板
 - **组件打包**：内置Esm、Commonjs打包模式，支持按需引入
+- **规范**：内置Eslint、StyleLint、Prettier统一规范
 
 ## 准备
 
