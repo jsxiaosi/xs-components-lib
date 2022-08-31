@@ -16,11 +16,11 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@dist',
+        find: '@xs-components',
         replacement: `${path.resolve(__dirname, '../dist/xs-components/es')}/`,
       },
       {
-        find: '@xs-components',
+        find: '@packages',
         replacement: `${path.resolve(__dirname, '../packages')}/`,
       },
     ],

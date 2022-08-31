@@ -1,9 +1,9 @@
 import type { UserConfig } from 'vitepress';
 
 import { mdPlugin } from './config/plugins';
-import { sidebar } from './config/pageRoute';
+import { sidebar } from './config/navigation';
 
-import nav from './router/nav.json';
+import nav from './navigation/nav.json';
 
 const config: UserConfig = {
   lang: 'zh-CN',

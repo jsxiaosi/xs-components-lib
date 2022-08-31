@@ -11,7 +11,7 @@ type Item = {
 
 const handleSidebars = () => {
   const file = glob.sync('*.json', {
-    cwd: resolve(vpRoot, 'router', 'pages'),
+    cwd: resolve(vpRoot, 'navigation', 'sidebar'),
     absolute: true,
     objectMode: true,
   });

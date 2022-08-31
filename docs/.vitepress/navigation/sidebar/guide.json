@@ -21,6 +21,20 @@
         {
           "text": "写第一个docs",
           "link": "docs/add-page"
+        },
+        {
+          "text": "组件示例",
+          "link": "docs/components"
+        }
+      ]
+    },
+    {
+      "text": "组件（packages）",
+      "collapsible": true,
+      "items": [
+        {
+          "text": "编写组件",
+          "link": "components/writing"
         }
       ]
     }

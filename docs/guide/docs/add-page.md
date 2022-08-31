@@ -31,7 +31,7 @@
 此时打开地址就可以访问到你的创建的页面`http://localhost:5174/MyDocs/docs-demo`
 
 ## 配置侧边栏
-在.vitepress/route/pages目录下创建json文件
+在.vitepress/navigation/sidebar目录下创建json文件
 ``` json
 {
   "/MyDocs/": [   // 约定式：/”你目录名称“/
@@ -47,15 +47,15 @@
   ]
 }
 ```
-外层的/MyDocs/是你的目录名称并且用/包裹，原因在于vitePress配置侧边栏的link路径是目录+文件约定配置，所以在config -> pageRoute 里面是默认处理拼接成/MyDocs/docs-demo。
+外层的/MyDocs/是你的目录名称并且用/包裹，原因在于vitePress配置侧边栏的link路径是目录+文件约定配置，所以在config -> navigation 里面是默认处理拼接成/MyDocs/docs-demo。
 
 text是侧边栏的标题名称。items配置单个页面，text页面在侧边栏的标题，link页面文件名称。
 
-需要注意的是：添加完路由需要重新运行，因为默认的配置是在运行时自动查找router目录里的json文件
+需要注意的是：添加完路由需要重新运行，因为默认的配置是在运行时自动查找navigation目录里的json文件
 
 
 ## 添加导航
-在.vitepress/route/nav.json 添加以下内容
+在.vitepress/navigation/nav.json 添加以下内容
 ``` json
   {
     "text": "标题",

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import { IButton } from '@dist/index';
-  import { useDeveloper } from '@dist/hooks/useDeveloper';
-  import { developFn } from '@dist/utils/myDevelop';
+  import { IButton } from '@xs-components/index';
+  import { useDeveloper } from '@xs-components/hooks/useDeveloper';
+  import { developFn } from '@xs-components/utils/myDevelop';
 
   const { num } = useDeveloper();
 

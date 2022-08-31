@@ -7,6 +7,9 @@ NAME=$1
 # 打印组件目录的完整地址
 FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../packages" && pwd)
 
+# 前缀
+PREFIX_NAME="I"
+
 # 启动脚本后面是否有写 name
 if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
   echo -e "\033[0;31m[ERROR] npm run ct \${name} 输入的字符错误 \033[0m"
@@ -27,37 +30,44 @@ mkdir -p "$FILENAME"
 mkdir -p "$FILENAME/src"
 
 # 生成文件.vue 并写入模板
-cat > $FILENAME/src/index.vue <<EOF
+cat > $FILENAME/src/${NAME}.vue <<EOF
+<script lang="ts" setup>
+  defineOptions({
+    name: '${NAME}',
+  });
+
+  defineProps<{}>();
+</script>
 <template>
   <div>
+    ${PREFIX_NAME}${NAME} components
   </div>
 </template>
-<script lang='ts'>
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: '${NAME}',
-  props: { },
-  setup(props) {
-    // init here
-  },
-})
-</script>
-<style>
-</style>
+
+<style scoped></style>
 EOF
 
 # 生成导入模板文件 index.ts
 cat <<EOF >"$FILENAME/index.ts"
-import type { App } from 'vue'
-import ${NAME} from './src/index.vue'
-import type { SFCWithInstall } from "../../types";
+import ${NAME} from './src/${NAME}.vue';
+import { withInstall } from '../../utils/install';
 
-${NAME}.install = (app: App) => {
-	app.component(${NAME}.name, ${NAME})
-}
+export const ${PREFIX_NAME}${NAME} = withInstall(${NAME}); // 增加类型
 
-const _${NAME}: SFCWithInstall<typeof ${NAME}> = ${NAME} // 增加类型
-export default _${NAME}
+export default ${PREFIX_NAME}${NAME};
+EOF
+
+# 获取example目录路径
+DOCS_FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../docs/example" && pwd)
+
+# 生成导入模板文件 \${name}.md
+mkdir $DOCS_FILE_PATH/${NAME}
+cat <<EOF >"$DOCS_FILE_PATH/${NAME}/basic.vue"
+<template>
+  <div>
+    <${PREFIX_NAME}${NAME}></${PREFIX_NAME}${NAME}>
+  </div>
+</template>
 EOF
 
 # 获取docs目录路径
@@ -67,10 +77,9 @@ DOCS_FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../docs/components" && pwd)
 cat <<EOF >"$DOCS_FILE_PATH/${NAME}.md"
 # ${NAME} 文档
 
-<script setup>
-import ${NAME} from '../../packages/components/${NAME}'
+:::docs ${PREFIX_NAME}${NAME}组件
 
-</script>
-<${NAME}/>
-这个是一个${NAME}组件
+${NAME}/basic
+
+:::
 EOF
