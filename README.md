@@ -17,7 +17,7 @@
 - [Vue3](https://v3.cn.vuejs.org/) - 熟悉 Vue 基础语法
 - [Es6+](http://es6.ruanyifeng.com/) - 熟悉 es6 基本语法
 - [VitePress](https://vuepress.vuejs.org/) - 熟悉 VitePress 基本使用
-- [element-push](https://element-plus.gitee.io/#/zh-CN/) - ui 基本使用
+- [element-plus](https://element-plus.gitee.io/#/zh-CN/) - ui 基本使用
 
 ## 安装使用
 
