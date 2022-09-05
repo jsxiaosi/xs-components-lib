@@ -25,12 +25,12 @@ hero:
 features:
   - icon: 📦
     title: 开箱即用
-    details: 内置打包组件、hooks、utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上
+    details: 内置打包组件、Hooks、Utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上
   - icon: ⚡️
     title: VitePress主题
     details: 内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题，你的风格由你自己定义
   - icon: 🛠️
     title: 代码块
-    details: 内置代码块解析器，参考element-push文档实现代码块解析器，示例和文档内容分离，让你的文档结构更加整洁
+    details: 内置代码块解析器，参考Element-Plus文档实现代码块解析器，示例和文档内容分离，让你的文档结构更加整洁
 ---
 
