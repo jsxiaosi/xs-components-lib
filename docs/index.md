@@ -5,7 +5,7 @@ title: xs组件模板
 titleTemplate: Next Generation Frontend Tooling
 
 hero:
-  name: XiaoSiComponents
+  name: xs-components-lib
   text: 组件库模板
   tagline: 快速开发组件库、文档
   image:
