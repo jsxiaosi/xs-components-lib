@@ -10,7 +10,7 @@
     "docs"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "ct": "bash ./script/template.sh",
     "clean": "rimraf ./lib",
