@@ -1,25 +1,24 @@
-import path from 'path'
-import { PKG_NAME, epOutput } from './paths'
+import path from 'path';
+import type { ModuleFormat } from 'rollup';
+import { PKG_NAME, epOutput } from './paths';
 
-import type { ModuleFormat } from 'rollup'
-
-export const modules = ['esm', 'cjs'] as const
-export type Module = typeof modules[number]
+export const modules = ['esm', 'cjs'] as const;
+export type Module = typeof modules[number];
 export interface BuildInfo {
-  module: 'ESNext' | 'CommonJS'
-  format: ModuleFormat
-  ext: 'mjs' | 'cjs' | 'js'
+  module: 'ESNext' | 'CommonJS';
+  format: ModuleFormat;
+  ext: 'mjs' | 'cjs' | 'js';
   output: {
     // es
-    name: string
+    name: string;
     // dist/xs-components
-    path: string
-  }
+    path: string;
+  };
 
   bundle: {
     // xs-components/es
-    path: string
-  }
+    path: string;
+  };
 }
 
 export const buildConfig: Record<Module, BuildInfo> = {
@@ -47,10 +46,8 @@ export const buildConfig: Record<Module, BuildInfo> = {
       path: `${PKG_NAME}/lib`,
     },
   },
-}
-export const buildConfigEntries = Object.entries(
-  buildConfig
-) as BuildConfigEntries
+};
+export const buildConfigEntries = Object.entries(buildConfig) as BuildConfigEntries;
 
-export type BuildConfig = typeof buildConfig
-export type BuildConfigEntries = [Module, BuildInfo][]
+export type BuildConfig = typeof buildConfig;
+export type BuildConfigEntries = [Module, BuildInfo][];

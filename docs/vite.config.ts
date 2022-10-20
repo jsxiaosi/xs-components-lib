@@ -2,8 +2,8 @@ import path from 'path';
 import type { UserConfig } from 'vite';
 import Inspect from 'vite-plugin-inspect';
 import DefineOptions from 'unplugin-vue-define-options/vite';
-import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 import { VitePWA } from 'vite-plugin-pwa';
+import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 
 export default (): UserConfig => {
   return {

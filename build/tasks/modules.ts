@@ -1,23 +1,22 @@
-import { rollup } from 'rollup'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import DefineOptions from 'unplugin-vue-macros/rollup'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import esbuild from 'rollup-plugin-esbuild'
-import glob from 'fast-glob'
+import { rollup } from 'rollup';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import DefineOptions from 'unplugin-vue-macros/rollup';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import esbuild from 'rollup-plugin-esbuild';
+import glob from 'fast-glob';
 
-import { epRoot, pkgRoot } from '../utils/paths'
+import type { OutputOptions } from 'rollup';
+import { epRoot, pkgRoot } from '../utils/paths';
 
-import type { OutputOptions } from 'rollup'
-import { buildConfigEntries } from '../utils/build-info'
-import { generateExternal } from '../utils/rollup'
+import { buildConfigEntries } from '../utils/build-info';
+import { generateExternal } from '../utils/rollup';
 
 export const excludeFiles = (files: string[]) => {
-  const excludes = ['node_modules']
-  return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)))
-
-}
+  const excludes = ['node_modules'];
+  return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)));
+};
 
 export const buildModules = async () => {
   const input = excludeFiles(
@@ -25,18 +24,23 @@ export const buildModules = async () => {
       cwd: pkgRoot,
       absolute: true,
       onlyFiles: true,
-    })
-  )
+    }),
+  );
 
   const bundle = await rollup({
     input,
     plugins: [
-      DefineOptions(),
-      vue({
-        isProduction: true,
-        customElement:false
+      DefineOptions({
+        setupComponent: false,
+        setupSFC: false,
+        plugins: {
+          vue: vue({
+            isProduction: true,
+          }),
+          vueJsx: vueJsx(),
+        },
       }),
-      vueJsx(),
+
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts'],
       }),
@@ -51,7 +55,7 @@ export const buildModules = async () => {
     ],
     external: await generateExternal(),
     treeshake: false,
-  })
+  });
 
   const options = buildConfigEntries.map(([module, config]): OutputOptions => {
     return {
@@ -62,10 +66,12 @@ export const buildModules = async () => {
       preserveModulesRoot: epRoot,
       sourcemap: true,
       entryFileNames: `[name].${config.ext}`,
-    }
-  })
+    };
+  });
 
-  await Promise.all(options.map((option) => {
-    return bundle.write(option)
-  }))
-}
+  await Promise.all(
+    options.map((option) => {
+      return bundle.write(option);
+    }),
+  );
+};

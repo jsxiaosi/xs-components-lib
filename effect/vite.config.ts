@@ -1,6 +1,6 @@
+import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
 
 console.log(`${path.resolve(__dirname, '../dist/xs-components/es')}/`);
 
