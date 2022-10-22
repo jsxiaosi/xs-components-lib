@@ -17,9 +17,6 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "paths": {
-      "@xs-components/*": ["../packages/"]
-    }
+    "experimentalDecorators": true
   }
 }

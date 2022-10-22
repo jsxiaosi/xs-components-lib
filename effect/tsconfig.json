@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@xs-components/*": ["../packages/*"]
+    }
+  },
+  "include": ["**/*", "typings/vue-shim.d.ts"],
+  "exclude": ["lib", "build"]
+}
