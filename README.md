@@ -1,4 +1,5 @@
 # 组件库模版
+
 基于`Vue3`,`VitePress`, `Rollup`，`Gulp`等主流技术开发的组件库模板。内置打包组件、hooks、utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题
 
 ## 特性
@@ -27,6 +28,12 @@
 git clone https://github.com/jsxiaosi/xs-components-lib.git
 
 git clone git@github.com:jsxiaosi/xs-components-lib.git
+```
+
+或者通过[`xs-cli`](https://github.com/jsxiaosi/xs-cli)快速创建
+
+```bash
+npx @jsxiaosi/xs-cli create [project-name]
 ```
 
 - 安装依赖
@@ -77,19 +84,24 @@ npm run docs:build
 
 - 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范
 
-  - `feature` 增加新功能
-  - `fixbug` 修复问题/BUG
-  - `style` 不影响程序逻辑的代码修改(修改空白字符，格式缩进，补全缺失的分号等，没有改变代码逻辑)
-  - `perf` 优化/性能提升
-  - `refactor` 重构
-  - `revert` 撤销修改
-  - `docs` 文档/注释
-  - `chore` 依赖更新/脚手架配置修改等
+  - `feat` 新增功能
+  - `fix` 修复缺陷
+  - `docs` 文档变更
+  - `style` 代码格式
+  - `refactor` 代码重构
+  - `perf` 性能优化
+  - `test` 添加疏漏测试或已有测试改动
+  - `build` 构建流程、外部依赖变更 (如升级 npm 包、修改打包配置等)
+  - `ci` 修改 CI 配置、脚本
+  - `revert` 回滚 commit
+  - `chore` 对构建过程或辅助工具和库的更改 (不影响源文件)
+  - `wip` 正在开发中
+  - `types` 类型定义文件修改
 
 - 或使用指令提交
 
 ```bash
-npm run commit
+npm run cz
 ```
 
 ### 规范相关
