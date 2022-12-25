@@ -1,7 +1,12 @@
 <script lang="ts" setup>
-  defineProps<{
-    type: 'primary' | 'success' | 'error';
-  }>();
+  withDefaults(
+    defineProps<{
+      type?: 'primary' | 'success' | 'error';
+    }>(),
+    {
+      type: 'primary',
+    },
+  );
 
   defineOptions({
     name: 'IButton',
