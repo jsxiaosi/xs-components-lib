@@ -3,8 +3,8 @@ import { copy, copyFile } from 'fs-extra';
 import type { TaskFunction } from 'gulp';
 import { parallel } from 'gulp';
 import { buildOutput, epOutput, pkgRoot } from '../utils/paths';
-import type { Module } from '../utils/build-info';
-import { buildConfig } from '../utils/build-info';
+import type { Module } from '../utils/build-config';
+import { buildConfig } from '../utils/build-config';
 
 export const copyTypesDefinitions: TaskFunction = (done) => {
   const src = resolve(buildOutput, 'types', 'packages');

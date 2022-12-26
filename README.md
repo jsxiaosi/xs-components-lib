@@ -1,10 +1,10 @@
 # 组件库模版
 
-基于`Vue3`,`VitePress`, `Rollup`，`Gulp`等主流技术开发的组件库模板。内置打包组件、hooks、utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题
+基于`Vue3`,`VitePress`, `Rollup`，`Gulp`等主流技术开发的组件库模板。内置打包组件、Hooks、Utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题
 
 ## 特性
 
-- **最新技术栈**：使用 Vue3/vite2 等前端前沿技术开发
+- **最新技术栈**：使用 Vue3/Rollup/Gulp 等前端前沿技术开发
 - **组件文档**：使用 VitePress 内置文档
 - **支持**：支持 TypeScript，支持按需引入
 - **模板**： 内置指令一键生成开发模板
@@ -13,12 +13,11 @@
 
 ## 准备
 
-- [node](http://nodejs.org/) 和 [git](https://git-scm.com/) -项目开发环境
-- [Vite](https://cn.vitejs.dev/) - 熟悉 vite 特性
+- [Node](http://nodejs.org/) 和 [Git](https://git-scm.com/) -项目开发环境
+- [Vite](https://cn.vitejs.dev/) - 熟悉 Vite 特性
 - [Vue3](https://v3.cn.vuejs.org/) - 熟悉 Vue 基础语法
-- [Es6+](http://es6.ruanyifeng.com/) - 熟悉 es6 基本语法
+- [Es6+](http://es6.ruanyifeng.com/) - 熟悉 Es6 基本语法
 - [VitePress](https://vuepress.vuejs.org/) - 熟悉 VitePress 基本使用
-- [element-plus](https://element-plus.gitee.io/#/zh-CN/) - ui 基本使用
 
 ## 安装使用
 
@@ -106,9 +105,9 @@ npm run cz
 
 ### 规范相关
 
-- [esLint](https://eslint.org/) - js 语法检测
-- [styleLint](https://stylelint.io/) - 样式语法检测
-- [commitLint](https://commitlint.js.org/#/) - git commit 提交规范检测
+- [EsLint](https://eslint.org/) - js 语法检测
+- [StyleLint](https://stylelint.io/) - 样式语法检测
+- [CommitLint](https://commitlint.js.org/#/) - git commit 提交规范检测
 
 ## 目录
 

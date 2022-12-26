@@ -1,9 +1,14 @@
 import { resolve } from 'path';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import DefineOptions from 'unplugin-vue-macros/rollup';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import esbuild from 'rollup-plugin-esbuild';
+import type { InputPluginOption } from 'rollup';
+import { pkgRoot } from './paths';
 
-import type { OutputOptions, RollupBuild } from 'rollup';
-import { projRoot } from './paths';
-
-export const epPackage = resolve(projRoot, 'package.json');
+export const epPackage = resolve(pkgRoot, 'package.json');
 
 export const getPackageManifest = (pkgPath: string) => {
   return require(pkgPath);
@@ -11,25 +16,49 @@ export const getPackageManifest = (pkgPath: string) => {
 
 export const getPackageDependencies = (
   pkgPath: string,
-): Record<'dependencies' | 'devDependencies', string[]> => {
+): Record<'dependencies' | 'peerDependencies', string[]> => {
   const manifest = getPackageManifest(pkgPath);
-  const { dependencies = {}, devDependencies = {} } = manifest;
+  const { dependencies = {}, peerDependencies = {} } = manifest;
 
   return {
     dependencies: Object.keys(dependencies),
-    devDependencies: Object.keys(devDependencies),
+    peerDependencies: Object.keys(peerDependencies),
   };
 };
 
+// 外部引入库标识，以防Rollup打包在一起
 export const generateExternal = async () => {
-  const { dependencies, devDependencies } = getPackageDependencies(epPackage);
-  return [...dependencies, ...devDependencies];
+  const { dependencies, peerDependencies } = getPackageDependencies(epPackage);
+  return [...dependencies, ...peerDependencies];
 };
 
-export function writeBundles(bundle: RollupBuild, options: OutputOptions[]) {
-  return Promise.all(options.map((option) => bundle.write(option)));
-}
+// Rollup插件配置
+export const rollupBuildPlugins = (): InputPluginOption => {
+  const plugins: InputPluginOption = [
+    DefineOptions({
+      setupComponent: false,
+      setupSFC: false,
+      plugins: {
+        vue: vue({
+          isProduction: true,
+        }),
+        vueJsx: vueJsx(),
+      },
+    }),
 
-export function formatBundleFilename(name: string, minify: boolean, ext: string) {
-  return `${name}${minify ? '.min' : ''}.${ext}`;
-}
+    nodeResolve({
+      extensions: ['.mjs', '.js', '.json', '.ts'],
+    }),
+
+    commonjs(),
+
+    esbuild({
+      sourceMap: true,
+      target: 'es2018',
+      loaders: {
+        '.vue': 'ts',
+      },
+    }),
+  ];
+  return plugins;
+};

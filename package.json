@@ -32,13 +32,15 @@
     "lint:pretty": "pretty-quick --staged",
     "lint:staged": "lint-staged",
     "cz": "czg",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "bump package.json packages/*/package.json docs/*/package.json"
   },
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.1",
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "@jsxiaosi/commitlint-config": "^0.0.14",
     "@jsxiaosi/eslint-config-prettier": "^0.0.14",
     "@jsxiaosi/eslint-config-vue": "^0.0.14",
-    "@jsxiaosi/commitlint-config": "^0.0.14",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/fs-extra": "^9.0.13",
@@ -104,7 +106,6 @@
       "vite"
     ]
   },
-  "license": "MIT",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
