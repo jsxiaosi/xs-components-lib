@@ -2,8 +2,10 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["vite/client", "unplugin-vue-macros/macros-global"],
     "paths": {
-      "@xs-components/*": ["../packages/*"]
+      "@xs-components/*": ["../dist/xs-components/es/*"],
+      "@packages/*": ["../packages/*"]
     }
   },
   "include": ["**/*", "typings/vue-shim.d.ts"],

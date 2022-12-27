@@ -17,7 +17,7 @@
 <template>
   <div>
     组件实例：
-    <IButton @click="add"></IButton>
+    <IButton @click="add">按钮</IButton>
     {{ num }}
   </div>
 </template>

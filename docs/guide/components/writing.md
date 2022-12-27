@@ -58,3 +58,36 @@ pnpm link --global xs-components
 # 进入你的项目目录将全局环境下的 node_modules 目录中的指定的软件包，链接到当前工作目录下
 pnpm link --global xs-components
 ```
+
+## 依赖第三方库
+
+### 开发环境
+
+开发环境下，在根目录下直接通过 `pnpm` 安装第三方库可以直接在开发组件库中调试
+
+或者
+
+进入packages里面使用 `pnpm` 安装
+
+### 生产环境
+
+正常开发组件中，我们在项目的根目录使用第三方库，调试时可以正常运行，但是我们并不需要在此直接把第三库和组件一起打包，只是需要保留引入关系就好，这里就需要将第三方库在packages目录package.json添加依赖项！
+
+rollup组件打包配置中，通过packages目录package.json里面的`peerDependencies`、`dependencies`配置来过滤只需要保留引入关系不需要打包的第三方库
+
+所以在打包组件库时需要把依赖的第三库添加到packages -> package.json文件里面的`peerDependencies`、`dependencies`
+
+举例：
+
+``` json
+{
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.191",
+    "@vueuse/core": "^9.9.0",
+    "lodash": "^4.17.21"
+  },
+}
+```
