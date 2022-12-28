@@ -35,6 +35,10 @@
         {
           "text": "编写组件",
           "link": "components/writing"
+        },
+        {
+          "text": "发布",
+          "link": "components/publish"
         }
       ]
     }
