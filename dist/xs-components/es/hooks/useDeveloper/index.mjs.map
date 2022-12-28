@@ -1,0 +1,1 @@
+{"version":3,"file":"index.mjs","sources":["../../../../../packages/hooks/useDeveloper/index.ts"],"sourcesContent":["import { ref } from 'vue';\n\nexport function useDeveloper() {\n  const num = ref<number>(0);\n  return { num };\n}\n"],"names":[],"mappings":";;AAEO,SAAS,YAAe,GAAA;AAC7B,EAAM,MAAA,GAAA,GAAM,IAAY,CAAC,CAAA,CAAA;AACzB,EAAA,OAAO,EAAE,GAAI,EAAA,CAAA;AACf;;;;"}
