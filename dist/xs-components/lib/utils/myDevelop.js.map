@@ -1,0 +1,1 @@
+{"version":3,"file":"myDevelop.js","sources":["../../../../packages/utils/myDevelop.ts"],"sourcesContent":["// utils 用例\nexport function developFn() {\n  console.log('developFn');\n}\n"],"names":[],"mappings":";;AACO,SAAS,SAAY,GAAA;AAC1B,EAAA,OAAA,CAAQ,IAAI,WAAW,CAAA,CAAA;AACzB;;;;"}

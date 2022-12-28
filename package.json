@@ -6,7 +6,7 @@
     "url": "git://github.com:jsxiaosi/xiaosiCommitLib.git"
   },
   "files": [
-    "dist/xs-components"
+    "dist"
   ],
   "workspaces": [
     "packages/*",
