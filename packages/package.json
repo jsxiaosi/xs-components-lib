@@ -8,11 +8,11 @@
     "vue"
   ],
   "bugs": {
-    "url": "https://github.com/jsxiaosi/xiaosiCommitLib/issues"
+    "url": "https://github.com/jsxiaosi/xs-components-lib/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsxiaosi/xiaosiCommitLib.git"
+    "url": "git+https://github.com/jsxiaosi/xs-components-lib.git"
   },
   "license": "MIT",
   "main": "lib/index.js",

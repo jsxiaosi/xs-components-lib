@@ -17,10 +17,6 @@ npm run release
 
 ## 发布组件
 
-为了能让你的组件在项目中能够通过npm的方式安装使用，有以下几种方式：
-
-### 1、发布到npm
-
 登录npm
 
 ``` bash
@@ -35,9 +31,3 @@ cd dist/xs-components
 # 发布到npm
 npm publish
 ```
-
-### 2、组件是内部使用，可以通过Git地址
-
-::: warning
-使用Git下载方式需要把dist/xs-components一并提交到Git仓库
-:::

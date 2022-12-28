@@ -3,11 +3,8 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com:jsxiaosi/xiaosiCommitLib.git"
+    "url": "git:https://github.com/jsxiaosi/xs-components-lib.git"
   },
-  "files": [
-    "dist"
-  ],
   "workspaces": [
     "packages/*",
     "docs"

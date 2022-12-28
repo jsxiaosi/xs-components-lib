@@ -13,9 +13,9 @@ node -v
 
 ``` sh
 # （https or ssh）
-git clone https://github.com/jsxiaosi/xiaosiCommitLib.git
+git clone https://github.com/jsxiaosi/xs-components-lib.git
 
-git clone git@github.com:jsxiaosi/xiaosiCommitLib.git
+git clone git@github.com:jsxiaosi/xs-components-lib.git
 ```
 
 ## 使用
