@@ -79,6 +79,9 @@ npm run build
 npm run docs:build
 ```
 
+## 使用教程
+运行`npm run docs:dev`即可查看使用教程
+
 ## Git 提交规范
 
 - 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范
