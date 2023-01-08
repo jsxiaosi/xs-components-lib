@@ -4,6 +4,10 @@ import { IButton } from './components/button';
 
 const component = [IButton] as Plugin[];
 
-export default function (app: App) {
+export const install = function (app: App) {
   component.forEach((i) => app.use(i));
-}
+};
+
+export default {
+  install,
+};

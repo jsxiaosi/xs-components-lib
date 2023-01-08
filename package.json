@@ -13,7 +13,7 @@
   "license": "MIT",
   "scripts": {
     "ct": "bash ./script/template.sh",
-    "clean": "rimraf ./lib",
+    "clean": "rimraf ./dist",
     "dev": "cd effect && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",

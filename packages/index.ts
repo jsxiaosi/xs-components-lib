@@ -1,10 +1,11 @@
-import install from './defInstall';
+import installer from './installer';
 
 export * from './components';
 export * from './hooks';
 export * from './utils';
+export * from './installer';
 
-export default install;
+export default installer;
 
 // import type { App } from 'vue';
 

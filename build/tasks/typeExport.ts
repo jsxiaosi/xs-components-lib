@@ -10,7 +10,7 @@ import { Project } from 'ts-morph';
 import type { CompilerOptions, SourceFile } from 'ts-morph';
 import { copyFile } from 'fs-extra';
 import { buildOutput, epRoot, pkgRoot, projRoot, PKG_NAME, epOutput } from '../utils/paths';
-import { excludeFiles } from './modules';
+import { excludeFiles } from './buildModules';
 
 const TSCONFIG_PATH = path.resolve(projRoot, 'tsconfig.web.json');
 const outDir = path.resolve(buildOutput, 'types');

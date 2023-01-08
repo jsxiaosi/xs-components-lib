@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { IButton } from '@xs-components/index';
+  // import { IButton } from '@xs-components/index';
   import { useDeveloper } from '@xs-components/hooks/useDeveloper';
   import { developFn } from '@xs-components/utils/myDevelop';
 
@@ -17,7 +17,7 @@
 <template>
   <div>
     组件实例：
-    <IButton @click="add">按钮</IButton>
+    <i-button @click="add">按钮</i-button>
     {{ num }}
   </div>
 </template>

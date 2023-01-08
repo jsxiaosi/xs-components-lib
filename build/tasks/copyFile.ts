@@ -2,9 +2,9 @@ import { resolve, join } from 'path';
 import { copy, copyFile } from 'fs-extra';
 import type { TaskFunction } from 'gulp';
 import { parallel } from 'gulp';
-import { buildOutput, epOutput, pkgRoot } from '../utils/paths';
-import type { Module } from '../utils/build-config';
-import { buildConfig } from '../utils/build-config';
+import { buildOutput, epOutput, epOutputCdn, pkgRoot } from '../utils/paths';
+import type { Module } from '../utils/buildConfig';
+import { buildConfig } from '../utils/buildConfig';
 
 export const copyTypesDefinitions: TaskFunction = (done) => {
   const src = resolve(buildOutput, 'types', 'packages');
@@ -14,6 +14,10 @@ export const copyTypesDefinitions: TaskFunction = (done) => {
     });
 
   return parallel(copyTypes('esm'), copyTypes('cjs'))(done);
+};
+
+export const copyThemeCdn = () => {
+  return copyFile(resolve(epOutput, 'theme-default', 'index.css'), join(epOutputCdn, 'index.css'));
 };
 
 export const copyComponentsPackages = () => {

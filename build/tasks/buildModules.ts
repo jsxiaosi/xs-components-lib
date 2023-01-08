@@ -1,10 +1,11 @@
+import { resolve } from 'path';
 import { rollup } from 'rollup';
 import glob from 'fast-glob';
 
 import type { OutputOptions } from 'rollup';
 import { pkgRoot } from '../utils/paths';
 
-import { buildConfigEntries } from '../utils/build-config';
+import { buildCdnConfig, buildConfigEntries } from '../utils/buildConfig';
 import { generateExternal, rollupBuildPlugins } from '../utils/rollup';
 
 export const excludeFiles = (files: string[]) => {
@@ -12,7 +13,8 @@ export const excludeFiles = (files: string[]) => {
   return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)));
 };
 
-export const buildModules = async () => {
+// node
+export const buildNodeModules = async () => {
   const input = excludeFiles(
     await glob('**/*.{js,ts,vue}', {
       cwd: pkgRoot,
@@ -24,7 +26,7 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: rollupBuildPlugins(),
-    external: await generateExternal(),
+    external: await generateExternal('node'),
     treeshake: false,
   });
 
@@ -42,6 +44,22 @@ export const buildModules = async () => {
 
   await Promise.all(
     options.map((option) => {
+      return bundle.write(option);
+    }),
+  );
+};
+
+// cdn
+export const buildCdnModules = async () => {
+  const bundle = await rollup({
+    input: resolve(pkgRoot, 'index.ts'),
+    plugins: rollupBuildPlugins(true),
+    external: await generateExternal('cdn'),
+    treeshake: false,
+  });
+
+  await Promise.all(
+    buildCdnConfig.map((option) => {
       return bundle.write(option);
     }),
   );
