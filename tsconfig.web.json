@@ -4,7 +4,7 @@
     "composite": true,
     "jsx": "preserve",
     "lib": ["ESNext", "Dom"],
-    "types": ["unplugin-vue-macros/macros-global"],
+    "types": ["vite/client", "unplugin-vue-macros/macros-global"],
     "typeRoots": ["./node_modules", "./typings"],
     "skipLibCheck": true
   },

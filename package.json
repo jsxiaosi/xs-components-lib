@@ -6,15 +6,17 @@
     "url": "git:https://github.com/jsxiaosi/xs-components-lib.git"
   },
   "workspaces": [
-    "packages/*",
-    "docs"
+    "packages",
+    "docs",
+    "effect",
+    "build"
   ],
   "author": "",
   "license": "MIT",
   "scripts": {
     "ct": "bash ./script/template.sh",
     "clean": "rimraf ./dist",
-    "dev": "cd effect && npm run dev",
+    "dev": "pnpm run -C effect dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",
     "type:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
@@ -38,7 +40,7 @@
     "@jsxiaosi/commitlint-config": "^0.0.14",
     "@jsxiaosi/eslint-config-prettier": "^0.0.14",
     "@jsxiaosi/eslint-config-vue": "^0.0.14",
-    "@types/node": "^18.11.17",
+    "@types/node": "*",
     "consola": "^2.15.3",
     "conventional-changelog-cli": "^2.2.2",
     "czg": "^1.4.1",
