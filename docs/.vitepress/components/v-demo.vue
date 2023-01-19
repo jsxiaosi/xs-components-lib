@@ -3,7 +3,7 @@
     <p text="sm" v-html="decodedDescription" />
 
     <div class="example">
-      <Example :file="path" :demo="formatPathDemos[path]" />
+      <Example :file="pathName" :demo="formatPathDemos[pathName]" />
       <div class="op-btns">
         <span class="op-btn" @click="copyCode">复制</span>
         <span class="op-btn" @click="toggleSourceVisible">显示源代码</span>
@@ -36,6 +36,7 @@
     demos: Object;
     source: string;
     path: string;
+    pathName: string;
     rawSource: string;
     description?: string;
   }>();
@@ -46,7 +47,7 @@
     const demos: Object = {};
 
     Object.keys(props.demos).forEach((key: string) => {
-      demos[key.replace('../example/', '').replace('.vue', '')] = props.demos[key].default;
+      demos[key.split('../example/')[1].replace('.vue', '')] = props.demos[key].default;
     });
     return demos;
   });

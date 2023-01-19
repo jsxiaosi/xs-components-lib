@@ -59,7 +59,7 @@ export const mdPlugin = (md: markdownit) => {
          */
         return `<Demo :demos="demos" source="${encodeURIComponent(
           highlight(source, 'vue'),
-        )}" path="${sourceFile}" raw-source="${encodeURIComponent(
+        )}" :path="path" pathName="${sourceFile}" raw-source="${encodeURIComponent(
           source,
         )}" description="${encodeURIComponent(localMd.render(description))}">`;
       }

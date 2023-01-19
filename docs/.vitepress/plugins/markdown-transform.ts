@@ -3,6 +3,7 @@ import path from 'path';
 import glob from 'fast-glob';
 
 import type { Plugin } from 'vite';
+import { projRoot } from '../utils/paths';
 
 type Append = Record<'headers' | 'footers' | 'scriptSetups', string[]>;
 
@@ -14,11 +15,17 @@ export function MarkdownTransform(): Plugin {
       if (!id.endsWith('.md')) return;
 
       const componentId = path.basename(id, '.md');
-
+      const filePath = path.relative(
+        path.resolve(id, '..'),
+        `${path.resolve(projRoot, 'example', `${componentId}/*.vue`)}`,
+      );
       const append: Append = {
         headers: [],
         footers: [],
-        scriptSetups: [`const demos = import.meta.globEager('../example/${componentId}/*.vue')`],
+        scriptSetups: [
+          `const demos = import.meta.globEager('${filePath}')`,
+          `const path = '${filePath}'`,
+        ],
       };
 
       return combineMarkdown(
