@@ -23,7 +23,9 @@ export function MarkdownTransform(): Plugin {
         headers: [],
         footers: [],
         scriptSetups: [
-          `const demos = import.meta.globEager('${filePath}')`,
+          `const demos = import.meta.globEager('${
+            filePath.startsWith('../') ? filePath : `./${filePath}`
+          }')`,
           `const path = '${filePath}'`,
         ],
       };

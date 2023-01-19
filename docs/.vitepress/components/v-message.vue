@@ -67,14 +67,13 @@
     border-radius: 2px;
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     margin-bottom: 8px;
-    color: var(--vp-c-text-1);
-    background: var(--c-brand);
-    border-color: var(--c-brand);
+    color: var(--vp-c-green);
+    background: var(--vp-c-bg);
+    border-color: var(--vp-c-bg);
   }
 
   .demoblock-message-error .demoblock-message-content {
-    background: #d03050;
-    border-color: #d03050;
+    color: var(--vp-c-red);
   }
 
   .demoblock-message {
