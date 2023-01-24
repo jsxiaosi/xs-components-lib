@@ -9,6 +9,7 @@ const config: UserConfig = {
   lang: 'zh-CN',
   title: 'xs-components-lib',
   description: 'Just playing around.',
+  lastUpdated: true,
   head: [
     [
       'link',
@@ -58,6 +59,10 @@ const config: UserConfig = {
     ],
   ],
   themeConfig: {
+    editLink: {
+      pattern: 'https://github.com/jsxiaosi/xs-components-lib/tree/main/docs/:path',
+      text: '编辑此页面',
+    },
     logo: '/logo2.png',
     logoSmall: '/pwa/favicon-32x32.png',
     // 展示搜索框
@@ -68,6 +73,7 @@ const config: UserConfig = {
         faeFilters: ['tags:guide,api'],
       },
     },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jsxiaosi/xs-components-lib' }],
     // 顶部标题栏
     nav,
     // 侧边栏

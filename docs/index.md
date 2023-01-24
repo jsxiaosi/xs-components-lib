@@ -19,8 +19,12 @@ hero:
       text: 组件
       link: /components/button
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/vitejs/vite
+      text: Starred
+      link: https://github.com/jsxiaosi/xs-components-lib/
+    - theme: alt
+      text: Forked
+      link: https://github.com/jsxiaosi/xs-components-lib/fork
+   
 
 features:
   - icon: 📦

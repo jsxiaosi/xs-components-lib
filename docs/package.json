@@ -19,6 +19,6 @@
     "prismjs": "^1.29.0",
     "vite-plugin-inspect": "^0.7.14",
     "vite-plugin-pwa": "^0.14.1",
-    "vitepress": "1.0.0-alpha.37"
+    "vitepress": "1.0.0-alpha.40"
   }
 }

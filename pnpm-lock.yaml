@@ -137,7 +137,7 @@ importers:
       prismjs: ^1.29.0
       vite-plugin-inspect: ^0.7.14
       vite-plugin-pwa: ^0.14.1
-      vitepress: 1.0.0-alpha.37
+      vitepress: 1.0.0-alpha.40
       vue: ^3.2.45
     dependencies:
       markdown-it: 13.0.1
@@ -155,7 +155,7 @@ importers:
       prismjs: 1.29.0
       vite-plugin-inspect: 0.7.14
       vite-plugin-pwa: 0.14.1
-      vitepress: 1.0.0-alpha.37
+      vitepress: 1.0.0-alpha.40
 
   effect:
     specifiers:
@@ -13883,10 +13883,10 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.37:
+  /vitepress/1.0.0-alpha.40:
     resolution:
       {
-        integrity: sha512-Od2lHPJQknboz9wZQaHem4BmLdUaSq7R2i3/1Qe2U5uR7T2y49D27MrBmOVQQ3xMHvv5Qa+wTNS0YwwJ7uSzwQ==,
+        integrity: sha512-axhLI/wq/V9RjzFQZ00Ur0WhvoZXG7E1H88NxnglZm6wU/FAePP4bGaWPzU2WZwy3Nzpb9cbf1oXC+1DNgv9cQ==,
       }
     hasBin: true
     dependencies:
