@@ -11,7 +11,7 @@ FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../packages" && pwd)
 PREFIX_NAME="I"
 
 # 启动脚本后面是否有写 name
-if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
+if [ "$#" -ne 1 ] || [ $NAME =~ $re ] || [ "$NAME" == "" ]; then
   echo -e "\033[0;31m[ERROR] npm run ct \${name} 输入的字符错误 \033[0m"
   exit 1
 fi
