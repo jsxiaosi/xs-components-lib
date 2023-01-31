@@ -80,6 +80,7 @@ npm run docs:build
 ```
 
 ## 使用教程
+
 运行`npm run docs:dev`即可查看使用教程
 
 ## Git 提交规范
@@ -138,6 +139,11 @@ npm run cz
 ├── tsconfig.json
 └── typings
 ```
+
+## 感谢以下优秀的项目提供帮助
+
+[Element-Plus](https://github.com/element-plus/element-plus)
+[Naive-UI](https://github.com/tusen-ai/naive-ui)
 
 ## 维护者
 
