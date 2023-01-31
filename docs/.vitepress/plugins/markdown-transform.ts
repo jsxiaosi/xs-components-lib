@@ -15,10 +15,13 @@ export function MarkdownTransform(): Plugin {
       if (!id.endsWith('.md')) return;
 
       const componentId = path.basename(id, '.md');
-      const filePath = path.relative(
-        path.resolve(id, '..'),
-        `${path.resolve(projRoot, 'example', `${componentId}/*.vue`)}`,
-      );
+      const filePath = path
+        .relative(
+          path.resolve(id, '..'),
+          `${path.resolve(projRoot, 'example', `${componentId}/*.vue`)}`,
+        )
+        .split(path.sep)
+        .join('/');
       const append: Append = {
         headers: [],
         footers: [],
