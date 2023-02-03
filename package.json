@@ -1,10 +1,6 @@
 {
   "name": "xs-components",
   "version": "1.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git:https://github.com/jsxiaosi/xs-components-lib.git"
-  },
   "workspaces": [
     "packages",
     "docs",
