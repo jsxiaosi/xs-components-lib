@@ -11,7 +11,7 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["unplugin-vue-define-options/vite", "vite/client"],
+    "types": ["unplugin-vue-macros/vite", "vite/client"],
     "typeRoots": ["./node_modules", "../typings/vue-shim.d.ts"],
     "lib": ["WebWorker"],
     "paths": {

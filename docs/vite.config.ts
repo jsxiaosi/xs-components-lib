@@ -1,7 +1,8 @@
 import path from 'path';
 import type { UserConfig } from 'vite';
 import Inspect from 'vite-plugin-inspect';
-import DefineOptions from 'unplugin-vue-define-options/vite';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import DefineOptions from 'unplugin-vue-macros/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 
@@ -24,9 +25,13 @@ export default (): UserConfig => {
       host: true,
     },
     plugins: [
+      DefineOptions({
+        plugins: {
+          vueJsx: vueJsx(),
+        },
+      }),
       Inspect(), // only applies in dev mode
       MarkdownTransform(),
-      DefineOptions(),
       VitePWA({
         includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
         manifest: {
