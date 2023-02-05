@@ -2,6 +2,8 @@
 
 基于`Vue3`,`VitePress`, `Rollup`，`Gulp`等主流技术开发的组件库模板。内置打包组件、Hooks、Utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题
 
+[预览地址](https://xs-com-lib.netlify.app)
+
 ## 特性
 
 - **最新技术栈**：使用 Vue3/Rollup/Gulp 等前端前沿技术开发
@@ -79,10 +81,6 @@ npm run build
 npm run docs:build
 ```
 
-## 使用教程
-
-运行`npm run docs:dev`即可查看使用教程
-
 ## Git 提交规范
 
 - 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范
@@ -142,8 +140,8 @@ npm run cz
 
 ## 感谢以下优秀的项目提供帮助
 
-[Element-Plus](https://github.com/element-plus/element-plus)
-[Naive-UI](https://github.com/tusen-ai/naive-ui)
+- [Element-Plus](https://github.com/element-plus/element-plus)
+- [Naive-UI](https://github.com/tusen-ai/naive-ui)
 
 ## 维护者
 
