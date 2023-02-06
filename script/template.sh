@@ -32,16 +32,15 @@ mkdir -p "$FILENAME/src"
 # 生成文件.vue 并写入模板
 cat > $FILENAME/src/${NAME}.vue <<EOF
 <script lang="ts" setup>
+  defineProps<{}>();
+
   defineOptions({
     name: '${NAME}',
   });
-
-  defineProps<{}>();
 </script>
+
 <template>
-  <div>
-    ${PREFIX_NAME}${NAME} components
-  </div>
+  <div> ${PREFIX_NAME}${NAME} components </div>
 </template>
 
 <style scoped></style>
@@ -49,8 +48,8 @@ EOF
 
 # 生成导入模板文件 index.ts
 cat <<EOF >"$FILENAME/index.ts"
-import ${NAME} from './src/${NAME}.vue';
 import { withInstall } from '../../utils/install';
+import ${NAME} from './src/${NAME}.vue';
 
 export const ${PREFIX_NAME}${NAME} = withInstall(${NAME}); // 增加类型
 
