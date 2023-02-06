@@ -2,22 +2,26 @@
   "name": "xs-components",
   "version": "0.0.1",
   "description": "Vue3 Component Library",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsxiaosi/xs-components-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsxiaosi/xs-components-lib/issues"
+  },
   "keywords": [
     "xs-components",
     "ui framework",
     "vue"
   ],
-  "bugs": {
-    "url": "https://github.com/jsxiaosi/xs-components-lib/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jsxiaosi/xs-components-lib.git"
-  },
-  "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
-  "types": "es/index.d.ts",
+  "sideEffects": [
+    "cdn/*",
+    "theme-chalk/**/*.css",
+    "theme-chalk/src/**/*.scss",
+    "es/components/*/style/*",
+    "lib/components/*/style/*"
+  ],
   "exports": {
     ".": {
       "require": "./lib/index.js",
@@ -32,19 +36,15 @@
     "./lib/*": "./lib/*.js",
     "./*": "./*"
   },
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "unpkg": "cdn/index.cdn.js",
+  "jsdelivr": "cdn/index.cdn.js",
+  "types": "es/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
-  "unpkg": "cdn/index.cdn.js",
-  "jsdelivr": "cdn/index.cdn.js",
   "style": "cdn/index.css",
-  "sideEffects": [
-    "cdn/*",
-    "theme-chalk/**/*.css",
-    "theme-chalk/src/**/*.scss",
-    "es/components/*/style/*",
-    "lib/components/*/style/*"
-  ],
   "peerDependencies": {
     "vue": "^3.2.0"
   },

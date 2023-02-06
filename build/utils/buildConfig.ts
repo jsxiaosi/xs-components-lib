@@ -3,7 +3,7 @@ import type { ModuleFormat, OutputOptions } from 'rollup';
 import { PKG_NAME, epOutput, PKG_HUMP_NAME, epOutputCdn } from './paths';
 
 export const modules = ['esm', 'cjs'] as const;
-export type Module = typeof modules[number];
+export type Module = (typeof modules)[number];
 export interface BuildInfo {
   module: 'ESNext' | 'CommonJS';
   format: ModuleFormat;
