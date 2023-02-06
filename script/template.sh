@@ -35,7 +35,7 @@ cat > $FILENAME/src/${NAME}.vue <<EOF
   defineProps<{}>();
 
   defineOptions({
-    name: '${NAME}',
+    name: '${PREFIX_NAME}${NAME}',
   });
 </script>
 
