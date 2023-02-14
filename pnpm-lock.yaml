@@ -74,6 +74,7 @@ importers:
     specifiers:
       '@esbuild-kit/cjs-loader': ^2.4.1
       '@rollup/plugin-commonjs': ^24.0.1
+      '@rollup/plugin-image': ^3.0.2
       '@rollup/plugin-node-resolve': ^15.0.1
       '@types/fs-extra': ^11.0.1
       '@types/gulp': ^4.0.10
@@ -99,6 +100,7 @@ importers:
     devDependencies:
       '@esbuild-kit/cjs-loader': 2.4.1
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.14.0
+      '@rollup/plugin-image': 3.0.2_rollup@3.14.0
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.14.0
       '@types/fs-extra': 11.0.1
       '@types/gulp': 4.0.10
@@ -3074,6 +3076,23 @@ packages:
       glob: 8.0.3
       is-reference: 1.2.1
       magic-string: 0.27.0
+      rollup: 3.14.0
+    dev: true
+
+  /@rollup/plugin-image/3.0.2_rollup@3.14.0:
+    resolution:
+      {
+        integrity: sha512-eGVrD6lummWH5ENo9LWX3JY62uBb9okUNQ2htXkugrG6WjACrMUVhWvss+0wW3fwJWmFYpoEny3yL4spEdh15g==,
+      }
+    engines: { node: '>=14.0.0' }
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.2_rollup@3.14.0
+      mini-svg-data-uri: 1.4.4
       rollup: 3.14.0
     dev: true
 
@@ -10354,6 +10373,14 @@ packages:
         integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==,
       }
     engines: { node: '>=4' }
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution:
+      {
+        integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==,
+      }
+    hasBin: true
     dev: true
 
   /minimatch/3.1.2:
