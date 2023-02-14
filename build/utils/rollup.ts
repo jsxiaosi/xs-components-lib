@@ -2,6 +2,7 @@ import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import DefineOptions from 'unplugin-vue-macros/rollup';
+import image from '@rollup/plugin-image';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
@@ -49,6 +50,8 @@ export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
         vueJsx: vueJsx(),
       },
     }),
+    // 图片处理
+    image(),
     // Rollup 处理外部模块
     nodeResolve({
       extensions: ['.mjs', '.js', '.json', '.ts'],

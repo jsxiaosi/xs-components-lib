@@ -4,10 +4,10 @@
   "scripts": {
     "build": "gulp --require @esbuild-kit/cjs-loader -f ./gulpfile.ts"
   },
-  "dependencies": {},
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.1",
     "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-image": "^3.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/fs-extra": "^11.0.1",
     "@types/gulp": "^4.0.10",
