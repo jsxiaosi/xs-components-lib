@@ -9,7 +9,7 @@ import { buildCdnConfig, buildConfigEntries } from '../utils/buildConfig';
 import { generateExternal, rollupBuildPlugins } from '../utils/rollup';
 
 export const excludeFiles = (files: string[]) => {
-  const excludes = ['node_modules'];
+  const excludes = ['node_modules', 'test'];
   return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)));
 };
 
