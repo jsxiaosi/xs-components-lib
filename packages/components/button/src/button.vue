@@ -1,12 +1,8 @@
 <script lang="ts" setup>
-  withDefaults(
-    defineProps<{
-      type?: 'primary' | 'success' | 'error';
-    }>(),
-    {
-      type: 'primary',
-    },
-  );
+  import { ButtonProps } from './button';
+
+  defineProps(ButtonProps);
+
   defineOptions({
     name: 'IButton',
   });
