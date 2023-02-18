@@ -1,17 +1,23 @@
-# 组件库模版
+<div align='center' ><h2>组件库模版</h2></div>
 
-基于`Vue3`,`VitePress`, `Rollup`，`Gulp`等主流技术开发的组件库模板。内置打包组件、Hooks、Utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题
+<div align='center' >
+基于<code>Vue3</code>,<code>VitePress</code>, <code>Rollup</code>，<code>Gulp</code>等主流技术开发的组件库模板。<br/>
+内置打包组件、Hooks、Utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上。<br/>
+内置VitePress主题，免去写样式的烦恼，自带夜间模式，可自定义主题。
+</div>
 
-[预览地址](https://xs-com-lib.netlify.app)
+## 文档
+
+<https://xs-com-lib.netlify.app>
 
 ## 特性
 
-- **最新技术栈**：使用 Vue3/Rollup/Gulp 等前端前沿技术开发
-- **组件文档**：使用 VitePress 内置文档
-- **支持**：支持 TypeScript，支持按需引入
-- **模板**： 内置指令一键生成开发模板
-- **组件打包**：内置Esm、Commonjs打包模式，支持按需引入
-- **规范**：内置Eslint、StyleLint、Prettier统一规范
+- **🚀 最新技术栈**：使用 Vue3/Rollup/Gulp 等前端前沿技术开发
+- **📦 开箱即用**：打包器支持组件、Hooks、Utils，可按需引入，支持TypeScript，让所有注意力都能放在文档编写和组件开发上
+- **🔗 支持CDN引入**：支持打包输出小巧的CDN模块，可同时支持UnPkg、JsDelivr CDN引入方式
+- **⚡️ VitePress**： Vue官方文档主题：VitePress，免去写样式的烦恼，自带夜间模式，可自定义主题，你的风格由你自己定义
+- **💻 一键生成模版命令**： 告别机器式手动创建开发模版的烦恼，一条命令即可简单快速生成，docs、组件开发文件，让你的专注力用在对的地方
+- **🚧 规范检查**：内置Eslint、Prettier、CommitLint工具更好统一你的代码风格，提交检查规范，方便你更好管理你的组件库，
 
 ## 准备
 
@@ -40,11 +46,7 @@ npx @jsxiaosi/xs-cli create [project-name]
 - 安装依赖
 
 ```bash
-npm install
-
-# 建议不要直接使用 cnpm 安装以来，会有各种诡异的 bug。可以通过如下操作解决 npm 下载速度慢的问题
-# 如果下载依赖慢可以使用淘宝镜像源安装依赖
-npm install --registry=https://registry.npm.taobao.org
+pnpm install
 ```
 
 ### Developer
