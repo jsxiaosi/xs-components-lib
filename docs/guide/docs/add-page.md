@@ -29,7 +29,7 @@ layout: doc
 ├── example         
 ├── guide     
 ├── MyDocs  
-│   ├── docs-demo.md
+│   └── docs-demo.md
 ├── public         
 └── index.md       
 ```

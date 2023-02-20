@@ -14,9 +14,9 @@ packages中开发的组件默认都是全部引入到VitePress里面，你在编
 
 ``` bash
 .
-├── example         # 代码示例存放目录
-│   └── button
-└───────└── basic.vue
+└── example         # 代码示例存放目录
+    └── button
+        └── basic.vue
 ```
 
 ### 内容
