@@ -16,21 +16,96 @@
 npm run ct '组件名称'
 ```
 
-此命令会在components、example、docs/components中创建组件和示例代码以及组件Markdown
-
-::: warning
-生成的模版还是需要自己在`packages/defInstall.ts`、`packages/components/index.ts`、`packages/global.d.ts`引入组件
-:::
-
-::: warning
-生成的组件Markdown不会自动在sidebar和nav添加配置，需要自行navigation添加配置
-:::
+::: tip 组件命名
 
 默认生成的组件模版组件名称前面都会自带一个大写的`I`，如果你们有自己独特的命名风格想要修改可以在script/template.sh修改`PREFIX_NAME`字段
 
 ``` bash
 PREFIX_NAME="I"
 ```
+
+:::
+
+此命令会在packages/components、docs/example、docs/components中创建组件和示例代码以及组件Markdown
+
+以下是通过`npm run ct button`生成组件的目录结构
+
+``` bash
+.
+├── docs
+│   ├── components
+│   │   └── button.md
+│   └── example
+│       └── button
+│           └── basic.vue
+└── packages  
+    └── components
+        └── button
+            ├── __tests__
+            │   └── button.test.tsx
+            ├── index.ts
+            └── src
+                ├── button.ts
+                └── button.vue
+```
+
+### docs/components/button.md
+
+组件文档markdown 详情：[编写第一个docs](./../docs/add-page.md) or [vitePress](https://vitepress.vuejs.org/guide/markdown)
+
+::: warning 注意
+生成的组件Markdown不会自动在sidebar和nav添加配置，需要手动在navigation添加配置
+:::
+
+### docs/example/button
+
+组件示例文件 详情：[组件示例](./../docs/components.md)
+
+### packages/components/button
+
+组件目录，主要有`__tests__`、`src`、`index.ts`组成，下面将介绍目录以及文件的使用
+
+#### `__tests__`
+
+测试文件存放目录，里面内置了一个测试模版
+
+#### `src`
+
+- button.vue
+  默认生成的模版是三段式写法以及typescript setup的vue文件，这个并不固定，如果你习惯其他写法可以自己更改或者使用`defineComponent`
+- button.ts  
+  组件类型声明文件
+
+  ``` ts
+  import type { ExtractPropTypes, PropType } from 'vue';
+
+  import type button from './button.vue';
+
+  export type Type = 'primary' | 'success' | 'error';
+
+  // 组件的props
+  /**
+   * 为何不使用纯类型声明编写组件props？当然是为了更好的组件类型提示
+     因为我发现当使用纯类型声明写组件props的时候，打包出来的类型默认
+     会把type转译成string 而不是字面量类型，如果需要定义复杂类型的
+     时候，vue提供了PropType属性为prop 标注更复杂的类型定义
+   */
+  export const ButtonProps = {
+    type: {
+      type: String as PropType<Type>,
+      default: 'default',
+    },
+  };
+
+  // 把组件props导出类型
+  export type ButtonPropsType = ExtractPropTypes<typeof ButtonProps>;
+  // 组件模板引用标注类型
+  export type ButtonInstanceType = InstanceType<typeof button>;
+  ```
+
+  ::: warning 手动引入
+  生成的模版还是需要自己在`packages/defInstall.ts`、`packages/components/index.ts`、`packages/global.d.ts`引入组件
+  :::
 
 ## 单元测试
 
