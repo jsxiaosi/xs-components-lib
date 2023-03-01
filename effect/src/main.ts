@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import xsCom from '@xs-components/index';
-// import '@xs-components/theme-chalk/index.css';
+import '@xs-components/theme-default/index.scss';
 
 import App from './App.vue';
 

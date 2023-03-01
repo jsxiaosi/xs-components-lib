@@ -26,11 +26,7 @@ export default defineConfig({
     alias: [
       {
         find: '@xs-components',
-        replacement: `${path.resolve(__dirname, '../dist/xs-components/es')}/`,
-      },
-      {
-        find: '@packages',
-        replacement: `${path.resolve(__dirname, '../packages')}/`,
+        replacement: `${path.resolve(__dirname, '../packages')}`,
       },
     ],
   },
