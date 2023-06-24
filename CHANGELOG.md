@@ -1,19 +1,31 @@
-## <small>1.0.2 (2023-02-18)</small>
+## <small>1.0.3 (2023-06-24)</small>
 
-* docs: 📝 - ([0b83dbc](https://github.com/jsxiaosi/xs-components-lib/commit/0b83dbc))
-* docs: 📝 - ([cdcd2f2](https://github.com/jsxiaosi/xs-components-lib/commit/cdcd2f2))
-* docs: 📝 md ([e2e3392](https://github.com/jsxiaosi/xs-components-lib/commit/e2e3392))
-* docs: 📝 rEADME.md ([3179c4d](https://github.com/jsxiaosi/xs-components-lib/commit/3179c4d))
-* feat: ✨ add vitest ([dd1691b](https://github.com/jsxiaosi/xs-components-lib/commit/dd1691b))
-* feat: ✨ 组件打包支持img ([82f8bab](https://github.com/jsxiaosi/xs-components-lib/commit/82f8bab)), closes [#10](https://github.com/jsxiaosi/xs-components-lib/issues/10)
+* feat: ✨ build ([7a9ef9d](https://github.com/jsxiaosi/xs-components-lib/commit/7a9ef9d))
+* build: 📦️ 更新依赖 ([6621530](https://github.com/jsxiaosi/xs-components-lib/commit/6621530))
+
+
+
+## <small>1.0.2 (2023-03-01)</small>
+
 * fix: 🐛 ` ([be92d10](https://github.com/jsxiaosi/xs-components-lib/commit/be92d10))
 * fix: 🐛 cHANGELOG.md ([b7a11c8](https://github.com/jsxiaosi/xs-components-lib/commit/b7a11c8))
 * fix: 🐛 ct 创建模版eslint报错问题 #7 ([03cd70d](https://github.com/jsxiaosi/xs-components-lib/commit/03cd70d)), closes [#7](https://github.com/jsxiaosi/xs-components-lib/issues/7) [#7](https://github.com/jsxiaosi/xs-components-lib/issues/7)
 * fix: 🐛 ct 组件name缺少PREFIX_NAME ([8f8ce95](https://github.com/jsxiaosi/xs-components-lib/commit/8f8ce95))
+* fix: 🐛 fix: effect第一次运行项目报错 ([db29719](https://github.com/jsxiaosi/xs-components-lib/commit/db29719))
 * fix: 🐛 link ([5750472](https://github.com/jsxiaosi/xs-components-lib/commit/5750472))
 * fix: 🐛 type error unplugin-vue-macros ([06fe2ed](https://github.com/jsxiaosi/xs-components-lib/commit/06fe2ed))
 * fix: 🐛 修复Windows换行符问题 ([2ce240a](https://github.com/jsxiaosi/xs-components-lib/commit/2ce240a)), closes [#6](https://github.com/jsxiaosi/xs-components-lib/issues/6)
+* fix: 🐛 忽略打包tests目录 ([1d280ac](https://github.com/jsxiaosi/xs-components-lib/commit/1d280ac))
 * fix: 🐛 换行符问题 ([53bdd2b](https://github.com/jsxiaosi/xs-components-lib/commit/53bdd2b))
+* docs: 📝 - ([de01b8d](https://github.com/jsxiaosi/xs-components-lib/commit/de01b8d))
+* docs: 📝 - ([0b83dbc](https://github.com/jsxiaosi/xs-components-lib/commit/0b83dbc))
+* docs: 📝 - ([cdcd2f2](https://github.com/jsxiaosi/xs-components-lib/commit/cdcd2f2))
+* docs: 📝 md ([e2e3392](https://github.com/jsxiaosi/xs-components-lib/commit/e2e3392))
+* docs: 📝 rEADME.md ([3179c4d](https://github.com/jsxiaosi/xs-components-lib/commit/3179c4d))
+* docs(components): 📝 组件文档 ([2fb8ae6](https://github.com/jsxiaosi/xs-components-lib/commit/2fb8ae6))
+* feat: ✨ add vitest ([dd1691b](https://github.com/jsxiaosi/xs-components-lib/commit/dd1691b))
+* feat: ✨ 增强组件类型提示 ([79539a9](https://github.com/jsxiaosi/xs-components-lib/commit/79539a9))
+* feat: ✨ 组件打包支持img ([82f8bab](https://github.com/jsxiaosi/xs-components-lib/commit/82f8bab)), closes [#10](https://github.com/jsxiaosi/xs-components-lib/issues/10)
 * build: 📦️ 更新依赖，优化docs命令，docs、effect支持jsx ([e4de3f5](https://github.com/jsxiaosi/xs-components-lib/commit/e4de3f5))
 
 
