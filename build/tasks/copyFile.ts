@@ -9,7 +9,7 @@ import { buildConfig } from '../utils/buildConfig';
 export const copyTypesDefinitions: TaskFunction = (done) => {
   const src = resolve(buildOutput, 'types', 'packages');
   const copyTypes = (module: Module) =>
-    Object.assign(() => copy(src, buildConfig[module].output.path, { recursive: true }), {
+    Object.assign(() => copy(src, buildConfig[module].output.path), {
       displayName: `copyTypes:${module}`,
     });
 

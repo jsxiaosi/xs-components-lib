@@ -1,13 +1,17 @@
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import DefineOptions from 'unplugin-vue-macros/rollup';
 import image from '@rollup/plugin-image';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
 import type { InputPluginOption } from 'rollup';
 import { pkgRoot } from './paths';
+
+const __defProp = Object.defineProperty;
+const __name = (target: any, value: any) =>
+  __defProp(target, 'name', { value, configurable: true });
+(globalThis as any).__name = __name;
 
 export const epPackage = resolve(pkgRoot, 'package.json');
 
@@ -39,17 +43,10 @@ export const generateExternal = async (buildType: 'node' | 'cdn') => {
 // Rollup插件配置
 export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
   const plugins: InputPluginOption = [
-    // setup 支持 DefineOptions 语法
-    DefineOptions({
-      setupComponent: false,
-      setupSFC: false,
-      plugins: {
-        vue: vue({
-          isProduction: true,
-        }),
-        vueJsx: vueJsx(),
-      },
+    vue({
+      isProduction: true,
     }),
+    vueJsx(),
     // 图片处理
     image(),
     // Rollup 处理外部模块
@@ -60,14 +57,13 @@ export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
     commonjs(),
     // Esm 编译器
     esbuild({
-      sourceMap: true,
-      target: 'es2018',
+      target: 'es2019',
       loaders: {
         '.vue': 'ts',
       },
       minify,
-      treeShaking: true,
-      legalComments: 'eof',
+      sourceMap: false,
+      keepNames: false,
     }),
   ];
   return plugins;
