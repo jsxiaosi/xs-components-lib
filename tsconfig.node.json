@@ -3,9 +3,9 @@
   "compilerOptions": {
     "composite": true,
     "lib": ["ESNext"],
-    "types": ["node"],
+    "types": ["vite/client"],
     "skipLibCheck": true
   },
-  "include": ["./build", "typings/vue-shim.d.ts"],
+  "include": ["./build", "./packages", "typings/vue-shim.d.ts"],
   "exclude": ["dist", "docs", "effect", "packages", "node_modules", "**/*.js"]
 }

@@ -37,6 +37,7 @@
     "release": "bump package.json packages/package.json docs/package.json"
   },
   "dependencies": {
+    "@jsxiaosi/utils": "^0.0.12",
     "@vueuse/core": "^10.2.0"
   },
   "devDependencies": {

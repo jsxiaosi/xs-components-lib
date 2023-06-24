@@ -8,6 +8,10 @@ import esbuild from 'rollup-plugin-esbuild';
 import type { InputPluginOption } from 'rollup';
 import { pkgRoot } from './paths';
 
+/**
+ * TODO: ReferenceError: __name is not defined
+ * https://github.com/vuejs/core/issues/8303
+ */
 const __defProp = Object.defineProperty;
 const __name = (target: any, value: any) =>
   __defProp(target, 'name', { value, configurable: true });
@@ -15,10 +19,20 @@ const __name = (target: any, value: any) =>
 
 export const epPackage = resolve(pkgRoot, 'package.json');
 
+/**
+ * 获取package.json文件内容
+ * @param pkgPath package.json路径
+ * @returns package.json Object
+ */
 export const getPackageManifest = (pkgPath: string) => {
   return require(pkgPath);
 };
 
+/**
+ * 查找package.json dependencies peerDependencies 配置
+ * @param pkgPath package.json路径
+ * @returns {dependencies:{...},peerDependencies:{...}}
+ */
 export const getPackageDependencies = (
   pkgPath: string,
 ): Record<'dependencies' | 'peerDependencies', string[]> => {
@@ -31,7 +45,11 @@ export const getPackageDependencies = (
   };
 };
 
-// 外部引入库标识，以防Rollup打包在一起
+/**
+ * 外部引入库标识，以防Rollup打包在一起
+ * @param buildType 'node' | 'cdn'
+ * @returns string[]
+ */
 export const generateExternal = async (buildType: 'node' | 'cdn') => {
   const { dependencies, peerDependencies } = getPackageDependencies(epPackage);
   if (buildType === 'cdn') {
@@ -40,7 +58,11 @@ export const generateExternal = async (buildType: 'node' | 'cdn') => {
   return [...dependencies, ...peerDependencies];
 };
 
-// Rollup插件配置
+/**
+ * Rollup插件配置
+ * @param minify:boolen 是否压缩生成的 JavaScript 代码
+ * @returns plugins[]
+ */
 export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
   const plugins: InputPluginOption = [
     vue({
@@ -62,8 +84,7 @@ export const rollupBuildPlugins = (minify?: boolean): InputPluginOption => {
         '.vue': 'ts',
       },
       minify,
-      sourceMap: false,
-      keepNames: false,
+      keepNames: true,
     }),
   ];
   return plugins;

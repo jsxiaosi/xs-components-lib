@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      '@jsxiaosi/utils':
+        specifier: ^0.0.12
+        version: 0.0.12
       '@vueuse/core':
         specifier: ^10.2.0
         version: 10.2.0(vue@3.3.4)
@@ -3221,6 +3224,15 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  /@jsxiaosi/utils@0.0.12:
+    resolution:
+      {
+        integrity: sha512-3THecikZp3X8hSFLvFzh+5dkIACiJR2lpRjp+ZFD/3mYphBNjxJULW4UsYm5c9wItthQ/llwZv5i+yhtoW0uPQ==,
+      }
+    dependencies:
+      crypto-js: 4.1.1
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution:
@@ -6690,6 +6702,13 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js@4.1.1:
+    resolution:
+      {
+        integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==,
+      }
+    dev: false
 
   /crypto-random-string@2.0.0:
     resolution:
