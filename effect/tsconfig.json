@@ -2,7 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["vite/client", "unplugin-vue-macros/macros-global"],
+    "types": ["vite/client"],
     "paths": {
       "@xs-components/*": ["../packages/*"]
     }
