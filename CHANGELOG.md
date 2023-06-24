@@ -1,6 +1,8 @@
 ## <small>1.0.3 (2023-06-24)</small>
 
+* chore: 🔨 依赖 ([f39e483](https://github.com/jsxiaosi/xs-components-lib/commit/f39e483))
 * feat: ✨ build ([7a9ef9d](https://github.com/jsxiaosi/xs-components-lib/commit/7a9ef9d))
+* feat: ✨ v1.0.3 ([0da7c75](https://github.com/jsxiaosi/xs-components-lib/commit/0da7c75))
 * build: 📦️ 更新依赖 ([6621530](https://github.com/jsxiaosi/xs-components-lib/commit/6621530))
 
 
