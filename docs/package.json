@@ -1,6 +1,7 @@
 {
   "name": "xs-components-docs",
   "version": "1.0.3",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vitepress dev .",
@@ -14,16 +15,15 @@
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.2",
-    "@types/markdown-it-container": "^2.0.5",
+    "@types/markdown-it-container": "^2.0.6",
     "@types/prismjs": "^1.26.0",
     "@vue/tsconfig": "^0.4.0",
-    "chalk": "^4.1.2",
     "escape-html": "^1.0.3",
-    "fast-glob": "^3.2.12",
+    "fast-glob": "^3.3.1",
     "kolorist": "^1.8.0",
     "prismjs": "^1.29.0",
-    "vite-plugin-inspect": "^0.7.28",
+    "vite-plugin-inspect": "^0.7.38",
     "vite-plugin-pwa": "^0.16.4",
-    "vitepress": "1.0.0-beta.3"
+    "vitepress": "1.0.0-rc.4"
   }
 }
