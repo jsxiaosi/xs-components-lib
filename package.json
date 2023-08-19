@@ -1,6 +1,6 @@
 {
   "name": "xs-components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "workspaces": [
     "packages",
     "docs",

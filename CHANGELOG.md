@@ -1,8 +1,16 @@
+## <small>1.0.4 (2023-08-19)</small>
+
+* build: 📦️ build ([a6cf3a3](https://github.com/jsxiaosi/xs-components-lib/commit/a6cf3a3))
+* build: 📦️ docs ([96a806d](https://github.com/jsxiaosi/xs-components-lib/commit/96a806d))
+
+
+
 ## <small>1.0.3 (2023-06-24)</small>
 
-* chore: 🔨 依赖 ([f39e483](https://github.com/jsxiaosi/xs-components-lib/commit/f39e483))
 * feat: ✨ build ([7a9ef9d](https://github.com/jsxiaosi/xs-components-lib/commit/7a9ef9d))
+* feat: ✨ v1.0.3 ([dbb960f](https://github.com/jsxiaosi/xs-components-lib/commit/dbb960f))
 * feat: ✨ v1.0.3 ([0da7c75](https://github.com/jsxiaosi/xs-components-lib/commit/0da7c75))
+* chore: 🔨 依赖 ([f39e483](https://github.com/jsxiaosi/xs-components-lib/commit/f39e483))
 * build: 📦️ 更新依赖 ([6621530](https://github.com/jsxiaosi/xs-components-lib/commit/6621530))
 
 
