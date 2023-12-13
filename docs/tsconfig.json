@@ -11,7 +11,7 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["vite/client"],
+    "types": ["vite/client", "./global.d.ts"],
     "lib": ["WebWorker"],
     "paths": {
       "@xs-components/*": ["../packages/"],
