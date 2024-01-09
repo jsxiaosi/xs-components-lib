@@ -1,5 +1,15 @@
+## <small>1.0.5 (2024-01-09)</small>
+
+* fix: 🐛 docs ([5afcf2f](https://github.com/jsxiaosi/xs-components-lib/commit/5afcf2f))
+* fix: 🐛 stylelint ([088d92e](https://github.com/jsxiaosi/xs-components-lib/commit/088d92e))
+* fix: 🐛 类型文件 ([fdd9a21](https://github.com/jsxiaosi/xs-components-lib/commit/fdd9a21))
+* feat: ✨ package ([fbf6550](https://github.com/jsxiaosi/xs-components-lib/commit/fbf6550))
+
+
+
 ## <small>1.0.4 (2023-08-19)</small>
 
+* feat: ✨ v1.0.4 ([c978d90](https://github.com/jsxiaosi/xs-components-lib/commit/c978d90))
 * build: 📦️ build ([a6cf3a3](https://github.com/jsxiaosi/xs-components-lib/commit/a6cf3a3))
 * build: 📦️ docs ([96a806d](https://github.com/jsxiaosi/xs-components-lib/commit/96a806d))
 
