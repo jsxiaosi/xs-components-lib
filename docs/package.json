@@ -9,21 +9,20 @@
     "serve": "vitepress serve . --port 9581"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1",
-    "markdown-it-container": "^3.0.0",
-    "vue": "^3.3.4"
+    "markdown-it": "^14.0.0",
+    "markdown-it-container": "^4.0.0"
   },
   "devDependencies": {
-    "@types/escape-html": "^1.0.2",
-    "@types/markdown-it-container": "^2.0.6",
-    "@types/prismjs": "^1.26.0",
-    "@vue/tsconfig": "^0.4.0",
+    "@types/escape-html": "^1.0.4",
+    "@types/markdown-it-container": "^2.0.9",
+    "@types/prismjs": "^1.26.3",
+    "@vue/tsconfig": "^0.5.1",
     "escape-html": "^1.0.3",
-    "fast-glob": "^3.3.1",
+    "fast-glob": "^3.3.2",
     "kolorist": "^1.8.0",
     "prismjs": "^1.29.0",
-    "vite-plugin-inspect": "^0.7.38",
-    "vite-plugin-pwa": "^0.16.4",
-    "vitepress": "1.0.0-rc.4"
+    "vite-plugin-inspect": "^0.8.1",
+    "vite-plugin-pwa": "^0.17.4",
+    "vitepress": "1.0.0-rc.36"
   }
 }

@@ -8,17 +8,6 @@ import esbuild from 'rollup-plugin-esbuild';
 import type { InputPluginOption } from 'rollup';
 import { pkgRoot } from './paths';
 
-/**
- * TODO: ReferenceError: __name is not defined
- * https://github.com/vuejs/core/issues/8303
- * https://github.com/esbuild-kit/tsx/issues/113
- * https://github.com/evanw/esbuild/issues/2605
- */
-const __defProp = Object.defineProperty;
-const __name = (target: any, value: any) =>
-  __defProp(target, 'name', { value, configurable: true });
-(globalThis as any).__name = __name;
-
 export const epPackage = resolve(pkgRoot, 'package.json');
 
 /**
