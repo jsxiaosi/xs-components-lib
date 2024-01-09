@@ -1,6 +1,5 @@
 {
   "name": "xs-components",
-  "type": "module",
   "version": "1.0.4",
   "workspaces": [
     "packages",
