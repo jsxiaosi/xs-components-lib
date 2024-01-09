@@ -1,8 +1,3 @@
-<template>
-  <transition name="collapse-transition" v-on="on">
-    <slot />
-  </transition>
-</template>
 <script lang="ts" setup>
   import type { RendererElement } from '@vue/runtime-core';
 
@@ -65,9 +60,18 @@
   };
 </script>
 
+<template>
+  <transition name="collapse-transition" v-on="on">
+    <slot />
+  </transition>
+</template>
+
 <style lang="scss">
   .collapse-transition-enter-active,
   .collapse-transition-leave-active {
-    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    transition:
+      height 0.3s ease-in-out,
+      padding 0.3s ease-in-out,
+      max-height 0.3s ease-in-out;
   }
 </style>

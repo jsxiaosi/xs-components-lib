@@ -1,13 +1,13 @@
-import glob from 'fast-glob';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import glob from 'fast-glob';
 import { vpRoot } from '../utils/paths';
 
-type Item = {
+interface Item {
   text: string;
   items?: Item[];
   link?: string;
-};
+}
 
 const handleSidebars = () => {
   const file = glob.sync('*.json', {

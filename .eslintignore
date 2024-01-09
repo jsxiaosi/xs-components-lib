@@ -13,3 +13,6 @@ dist
 *html
 Dockerfile
 lib
+docs/.vitepress/dist/*
+docs/.vitepress/cache/*
+!.*

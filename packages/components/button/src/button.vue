@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <button class="mu_Button" :class="type">
+  <button class="mu-button" :class="type">
     <slot></slot>
   </button>
 </template>
-
-<style scoped></style>

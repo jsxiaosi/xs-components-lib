@@ -12,7 +12,7 @@
     "noImplicitAny": false,
     "skipLibCheck": true,
     "types": ["vite/client"],
-    "lib": ["WebWorker"],
+    "lib": ["WebWorker", "DOM"],
     "paths": {
       "@xs-components/*": ["../packages/"],
       "@/*": ["./.vitepress/"]

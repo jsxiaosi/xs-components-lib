@@ -1,5 +1,6 @@
 {
   "name": "xs-components",
+  "type": "module",
   "version": "1.0.4",
   "workspaces": [
     "packages",
@@ -7,12 +8,12 @@
     "effect",
     "build"
   ],
+  "author": "",
+  "license": "MIT",
   "engines": {
     "node": ">=16",
     "pnpm": ">=8.1.0"
   },
-  "author": "",
-  "license": "MIT",
   "scripts": {
     "ct": "bash ./script/template.sh",
     "clean": "rimraf ./dist",
@@ -64,9 +65,12 @@
     "prettier": "3.1.1",
     "sass": "^1.69.7",
     "stylelint": "^16.1.0",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.0.0",
     "typescript": "^5.3.3",
