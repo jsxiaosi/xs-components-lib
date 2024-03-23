@@ -1,9 +1,16 @@
+## <small>1.0.6 (2024-03-23)</small>
+
+* build(docs): 📦️ vitepress ([9d632b6](https://github.com/jsxiaosi/xs-components-lib/commit/9d632b6))
+
+
+
 ## <small>1.0.5 (2024-01-09)</small>
 
+* feat: ✨ package ([fbf6550](https://github.com/jsxiaosi/xs-components-lib/commit/fbf6550))
+* feat: ✨ v1.0.5 ([5471faf](https://github.com/jsxiaosi/xs-components-lib/commit/5471faf))
 * fix: 🐛 docs ([5afcf2f](https://github.com/jsxiaosi/xs-components-lib/commit/5afcf2f))
 * fix: 🐛 stylelint ([088d92e](https://github.com/jsxiaosi/xs-components-lib/commit/088d92e))
 * fix: 🐛 类型文件 ([fdd9a21](https://github.com/jsxiaosi/xs-components-lib/commit/fdd9a21))
-* feat: ✨ package ([fbf6550](https://github.com/jsxiaosi/xs-components-lib/commit/fbf6550))
 
 
 
