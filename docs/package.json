@@ -9,7 +9,7 @@
     "serve": "vitepress serve . --port 9581"
   },
   "dependencies": {
-    "markdown-it": "^14.0.0",
+    "markdown-it": "^14.1.0",
     "markdown-it-container": "^4.0.0"
   },
   "devDependencies": {
@@ -21,8 +21,8 @@
     "fast-glob": "^3.3.2",
     "kolorist": "^1.8.0",
     "prismjs": "^1.29.0",
-    "vite-plugin-inspect": "^0.8.1",
-    "vite-plugin-pwa": "^0.17.4",
-    "vitepress": "1.0.0-rc.36"
+    "vite-plugin-inspect": "^0.8.3",
+    "vite-plugin-pwa": "^0.19.7",
+    "vitepress": "1.0.1"
   }
 }
