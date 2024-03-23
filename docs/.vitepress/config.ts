@@ -6,6 +6,7 @@ import { sidebar } from './config/navigation';
 import nav from './navigation/nav.json';
 
 const config: UserConfig = {
+  base: '/xs-components-lib/',
   lang: 'zh-CN',
   title: 'xs-components-lib',
   description: 'Just playing around.',
