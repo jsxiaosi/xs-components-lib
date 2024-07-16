@@ -15,7 +15,7 @@ export const clean: TaskFunction = (done) => {
 
 export default series(
   clean,
-  buildTheme,
-  parallel(buildNodeModules, buildCdnModules, generateTypesDefinitions, buildGlobalTypeFile),
+  parallel(buildNodeModules, buildCdnModules, generateTypesDefinitions),
+  parallel(buildTheme, buildGlobalTypeFile),
   parallel(copyTypesDefinitions, copyThemeCdn, copyComponentsPackages),
 );

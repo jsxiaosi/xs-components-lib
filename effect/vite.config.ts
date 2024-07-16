@@ -5,12 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue({
-      reactivityTransform: true,
-    }),
-    vueJsx(),
-  ],
+  plugins: [vue(), vueJsx()],
   server: {
     // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
     host: '0.0.0.0',
