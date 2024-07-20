@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.4",
-    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/fs-extra": "^11.0.4",
@@ -17,16 +17,16 @@
     "@types/gulp-postcss": "^8.0.6",
     "@types/gulp-sass": "^5.0.4",
     "del": "^7.1.0",
-    "esbuild": "^0.21.3",
+    "esbuild": "^0.23.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
-    "rollup": "^4.17.2",
+    "rollup": "^4.19.0",
     "rollup-plugin-esbuild": "^6.1.1",
     "rollup-plugin-terser": "^7.0.2",
-    "ts-morph": "^22.0.0",
-    "tsx": "^4.10.5"
+    "ts-morph": "^23.0.0",
+    "tsx": "^4.16.2"
   }
 }
