@@ -129,8 +129,11 @@ npm run test:coverage
   // 引用打包的目录
   import { IButton } from '@xs-components/index';
   // 引用packages的目录
-  import { IButton } from '@packages/index';
+  // import { IButton } from '@packages/index';
  </script>
+ <template>
+  <IButton />
+</template>
 ```
 
 ## 项目调试组件库
@@ -176,6 +179,6 @@ rollup组件打包配置中，通过packages目录package.json里面的`peerDepe
     "@types/lodash": "^4.14.191",
     "@vueuse/core": "^9.9.0",
     "lodash": "^4.17.21"
-  },
+  }
 }
 ```

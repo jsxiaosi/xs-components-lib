@@ -6,7 +6,7 @@
 
 <template>
   <svg class="icon" aria-hidden="true">
-    <use :xlink:href="`#${name}`"></use>
+    <use :xlink:href="`#${name}`" />
   </svg>
 </template>
 

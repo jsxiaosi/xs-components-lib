@@ -1,15 +1,15 @@
 <script lang="ts" setup>
   import { ButtonProps } from './button';
 
-  defineProps(ButtonProps);
-
   defineOptions({
     name: 'IButton',
   });
+
+  defineProps(ButtonProps);
 </script>
 
 <template>
   <button class="mu-button" :class="type">
-    <slot></slot>
+    <slot />
   </button>
 </template>

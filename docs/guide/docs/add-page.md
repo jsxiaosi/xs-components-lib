@@ -69,11 +69,11 @@ text是侧边栏的标题名称。items配置单个页面，items里面的text�
 在.vitepress/navigation/nav.json 添加以下内容
 
 ``` json
-  {
-    "text": "标题",
-    "link": "/MyDocs/docs-demo",
-    "activeMatch": "/MyDocs/"
-  },
+{
+  "text": "标题",
+  "link": "/MyDocs/docs-demo",
+  "activeMatch": "/MyDocs/"
+}
 ```
 
 和侧边栏同理，重新运行即可看到顶部导航栏添加了内容

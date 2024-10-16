@@ -1,7 +1,7 @@
 import type { UserConfig } from 'vitepress';
 
-import { mdPlugin } from './config/plugins';
 import { sidebar } from './config/navigation';
+import { mdPlugin } from './config/plugins';
 
 import nav from './navigation/nav.json';
 

@@ -1,9 +1,9 @@
 import { resolve } from 'path';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import commonjs from '@rollup/plugin-commonjs';
 import image from '@rollup/plugin-image';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import esbuild from 'rollup-plugin-esbuild';
 import type { InputPluginOption } from 'rollup';
 import { pkgRoot } from './paths';
@@ -16,6 +16,8 @@ export const epPackage = resolve(pkgRoot, 'package.json');
  * @returns package.json Object
  */
 export const getPackageManifest = (pkgPath: string) => {
+  // TODO: 后续使用import.meta.resolve()获取package.json文件内容
+  // eslint-disable-next-line ts/no-require-imports
   return require(pkgPath);
 };
 
@@ -24,9 +26,7 @@ export const getPackageManifest = (pkgPath: string) => {
  * @param pkgPath package.json路径
  * @returns {dependencies:{...},peerDependencies:{...}}
  */
-export const getPackageDependencies = (
-  pkgPath: string,
-): Record<'dependencies' | 'peerDependencies', string[]> => {
+export const getPackageDependencies = (pkgPath: string): Record<'dependencies' | 'peerDependencies', string[]> => {
   const manifest = getPackageManifest(pkgPath);
   const { dependencies = {}, peerDependencies = {} } = manifest;
 

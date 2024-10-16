@@ -1,8 +1,8 @@
 import path from 'path';
-import type { UserConfig } from 'vite';
-import Inspect from 'vite-plugin-inspect';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import Inspect from 'vite-plugin-inspect';
 import { VitePWA } from 'vite-plugin-pwa';
+import type { UserConfig } from 'vite';
 import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 
 export default (): UserConfig => {

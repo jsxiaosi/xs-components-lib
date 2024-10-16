@@ -1,7 +1,7 @@
 {
   "name": "xs-components-build",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "NODE_OPTIONS='--require tsx/cjs'  gulp --preload ./gulpfile.ts"
   },

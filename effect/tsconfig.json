@@ -2,10 +2,10 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["vite/client"],
     "paths": {
       "@xs-components/*": ["../packages/*"]
-    }
+    },
+    "types": ["vite/client"]
   },
   "include": ["**/*", "typings/vue-shim.d.ts"],
   "exclude": ["lib", "build"]

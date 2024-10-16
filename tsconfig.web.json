@@ -4,8 +4,8 @@
     "composite": true,
     "jsx": "preserve",
     "lib": ["ESNext", "Dom"],
-    "types": ["vite/client"],
     "typeRoots": ["./node_modules", "./typings"],
+    "types": ["vite/client"],
     "skipLibCheck": true
   },
   "include": ["packages", "typings/vue-shim.d.ts"],

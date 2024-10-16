@@ -1,8 +1,8 @@
-import { createApp } from 'vue';
 import xsCom from '@xs-components/index';
-import '@xs-components/theme-default/index.scss';
-
+import { createApp } from 'vue';
 import App from './App.vue';
+
+import '@xs-components/theme-default/index.scss';
 
 const app = createApp(App);
 

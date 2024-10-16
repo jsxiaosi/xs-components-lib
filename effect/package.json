@@ -1,7 +1,7 @@
 {
   "name": "xs-components-effect",
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",

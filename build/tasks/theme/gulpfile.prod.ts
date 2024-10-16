@@ -1,14 +1,14 @@
 import path from 'path';
-import { src, dest, parallel } from 'gulp';
+import chalk from 'chalk';
+import consola from 'consola';
+import { dest, parallel, src } from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
-import consola from 'consola';
-import chalk from 'chalk';
 
+import gulpSass from 'gulp-sass';
 // 基础方法
 import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-import { copyfont, minifontCss, config } from './gulpfile.base';
+import { config, copyfont, minifontCss } from './gulpfile.base';
 
 const sass = gulpSass(dartSass);
 
@@ -22,7 +22,7 @@ const compile = () =>
       }),
     )
     .pipe(
-      cleanCSS({}, (details) => {
+      cleanCSS({}, details => {
         consola.success(
           `${chalk.cyan(details.name)}: ${chalk.yellow(
             details.stats.originalSize / 1000,

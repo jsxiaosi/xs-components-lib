@@ -1,14 +1,14 @@
-import { series, parallel } from 'gulp';
-import type { TaskFunction } from 'undertaker';
 import { deleteSync } from 'del';
-import { buildCdnModules, buildNodeModules } from './tasks/buildModules';
-import { buildOutput } from './utils/paths';
-import { generateTypesDefinitions } from './tasks/typeExport';
-import { buildTheme } from './tasks/theme/gulpfile.prod';
-import { copyComponentsPackages, copyThemeCdn, copyTypesDefinitions } from './tasks/copyFile';
+import { parallel, series } from 'gulp';
+import type { TaskFunction } from 'undertaker';
 import { buildGlobalTypeFile } from './tasks/buildGlobalFile';
+import { buildCdnModules, buildNodeModules } from './tasks/buildModules';
+import { copyComponentsPackages, copyThemeCdn, copyTypesDefinitions } from './tasks/copyFile';
+import { buildTheme } from './tasks/theme/gulpfile.prod';
+import { generateTypesDefinitions } from './tasks/typeExport';
+import { buildOutput } from './utils/paths';
 
-export const clean: TaskFunction = (done) => {
+export const clean: TaskFunction = done => {
   deleteSync(buildOutput, { force: true });
   done();
 };

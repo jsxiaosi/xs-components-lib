@@ -1,7 +1,7 @@
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
 import { transformString } from '@jsxiaosi/utils';
-import { PKG_NAME, epOutput, pkgRoot } from '../utils/paths';
+import { epOutput, PKG_NAME, pkgRoot } from '../utils/paths';
 
 const excludeComponents: string[] = [];
 
@@ -10,12 +10,9 @@ export async function buildGlobalTypeFile() {
   const components = fs.readdirSync(componentsDir);
 
   const componentDeclarations = components
-    .filter(
-      (componentName) =>
-        !componentName.endsWith('.ts') && !excludeComponents.includes(componentName),
-    )
+    .filter(componentName => !componentName.endsWith('.ts') && !excludeComponents.includes(componentName))
     .map(
-      (componentName) =>
+      componentName =>
         `I${transformString(
           componentName,
           'upperCamelCase',

@@ -2,21 +2,21 @@
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
+    "lib": ["WebWorker", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": false,
-    "skipLibCheck": true,
-    "types": ["vite/client"],
-    "lib": ["WebWorker", "DOM"],
     "paths": {
       "@xs-components/*": ["../packages/"],
       "@/*": ["./.vitepress/"]
-    }
+    },
+    "resolveJsonModule": true,
+    "types": ["vite/client"],
+    "strict": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": ["**/*", ".vitepress/**/*"],
   "exclude": ["node_modules", "dist", "**/*.js"]

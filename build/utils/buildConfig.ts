@@ -1,6 +1,6 @@
 import path from 'path';
 import type { ModuleFormat, OutputOptions } from 'rollup';
-import { PKG_NAME, epOutput, PKG_HUMP_NAME, epOutputCdn } from './paths';
+import { epOutput, epOutputCdn, PKG_HUMP_NAME, PKG_NAME } from './paths';
 
 export const modules = ['esm', 'cjs'] as const;
 export type Module = (typeof modules)[number];

@@ -1,16 +1,16 @@
 import { resolve } from 'path';
-import { rollup } from 'rollup';
 import glob from 'fast-glob';
+import { rollup } from 'rollup';
 
 import type { OutputOptions } from 'rollup';
-import { pkgRoot } from '../utils/paths';
-
 import { buildCdnConfig, buildConfigEntries } from '../utils/buildConfig';
+
+import { pkgRoot } from '../utils/paths';
 import { generateExternal, rollupBuildPlugins } from '../utils/rollup';
 
 export const excludeFiles = (files: string[]) => {
   const excludes = ['node_modules', 'test'];
-  return files.filter((path) => !excludes.some((exclude) => path.includes(exclude)));
+  return files.filter(path => !excludes.some(exclude => path.includes(exclude)));
 };
 
 // node
@@ -43,7 +43,7 @@ export const buildNodeModules = async () => {
   });
 
   await Promise.all(
-    options.map((option) => {
+    options.map(option => {
       return bundle.write(option);
     }),
   );
@@ -59,7 +59,7 @@ export const buildCdnModules = async () => {
   });
 
   await Promise.all(
-    buildCdnConfig.map((option) => {
+    buildCdnConfig.map(option => {
       return bundle.write(option);
     }),
   );

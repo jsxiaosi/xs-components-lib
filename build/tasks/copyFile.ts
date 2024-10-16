@@ -1,12 +1,12 @@
-import { resolve, join } from 'path';
+import { join, resolve } from 'path';
 import { copy, copyFile } from 'fs-extra';
-import type { TaskFunction } from 'gulp';
 import { parallel } from 'gulp';
+import type { TaskFunction } from 'gulp';
+import { buildConfig } from '../utils/buildConfig';
 import { buildOutput, epOutput, epOutputCdn, pkgRoot } from '../utils/paths';
 import type { Module } from '../utils/buildConfig';
-import { buildConfig } from '../utils/buildConfig';
 
-export const copyTypesDefinitions: TaskFunction = (done) => {
+export const copyTypesDefinitions: TaskFunction = done => {
   const src = resolve(buildOutput, 'types', 'packages');
   const copyTypes = (module: Module) =>
     Object.assign(() => copy(src, buildConfig[module].output.path), {

@@ -1,19 +1,19 @@
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
+import { red } from 'kolorist';
 import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
-import type Token from 'markdown-it/lib/token';
 import type Renderer from 'markdown-it/lib/renderer';
-import { red } from 'kolorist';
-import { projRoot } from '../utils/paths';
+import type Token from 'markdown-it/lib/token';
 import { highlight } from '../utils/highlight';
+import { projRoot } from '../utils/paths';
 
 const localMd = MarkdownIt();
 
 interface ContainerOpts {
   marker?: string | undefined;
-  validate?(params: string): boolean;
-  render?(tokens: Token[], index: number, options: any, env: any, self: Renderer): string;
+  validate?: (params: string) => boolean;
+  render?: (tokens: Token[], index: number, options: any, env: any, self: Renderer) => string;
 }
 
 export const mdPlugin = (md: markdownit) => {
@@ -40,10 +40,7 @@ export const mdPlugin = (md: markdownit) => {
           // 查找示例文件
           try {
             // 如果查找不到文件抛出异常
-            source = fs.readFileSync(
-              path.resolve(projRoot, 'example', `${sourceFile}.vue`),
-              'utf-8',
-            );
+            source = fs.readFileSync(path.resolve(projRoot, 'example', `${sourceFile}.vue`), 'utf-8');
           } catch (error) {
             console.error(red((error as Error).message));
             throw new Error(`example目录不存在: ${sourceFile} 目录或者文件`);

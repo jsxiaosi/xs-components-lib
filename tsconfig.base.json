@@ -2,20 +2,20 @@
   // https://www.tslang.cn/docs/handbook/compiler-options.html
   "compilerOptions": {
     "target": "es2019",
+    "jsx": "preserve",
+    "noLib": false,
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "removeComments": true,
-    "noLib": false,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "strictFunctionTypes": false,
-    "jsx": "preserve",
-    "sourceMap": false,
-    "esModuleInterop": true,
     "resolveJsonModule": true,
+    "strict": true,
+    "strictFunctionTypes": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "experimentalDecorators": true
+    "removeComments": true,
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

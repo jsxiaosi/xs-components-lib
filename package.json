@@ -27,7 +27,6 @@
     "docs:serve": "pnpm run -C docs serve",
     "build": "pnpm run -C build build",
     "lint:eslint": "eslint . --fix",
-    "lint:prettier": "prettier --write --loglevel warn .",
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:staged": "lint-staged",
     "cz": "czg",
@@ -40,9 +39,8 @@
   },
   "devDependencies": {
     "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@jsxiaosi/commitlint-config": "^0.1.0",
-    "@jsxiaosi/eslint-config-prettier": "^0.1.0",
-    "@jsxiaosi/eslint-config-vue": "^0.1.0",
+    "@jsxiaosi/commitlint-config": "^1.0.2",
+    "@jsxiaosi/eslint-config": "^1.0.2",
     "@types/node": "*",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
@@ -53,6 +51,7 @@
     "conventional-changelog-cli": "^5.0.0",
     "czg": "^1.9.4",
     "eslint": "^9.7.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "fast-glob": "^3.3.2",
     "husky": "^9.1.1",
     "jsdom": "^24.1.0",
@@ -101,26 +100,24 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix"
     ],
     "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-      "prettier --write--parser json"
+      "eslint --fix"
     ],
     "package.json": [
-      "prettier --write"
+      "eslint --fix"
     ],
     "*.vue": [
       "eslint --fix",
-      "prettier --write",
       "stylelint --fix"
     ],
     "*.{scss,less,styl,html}": [
       "stylelint --fix",
-      "prettier --write"
+      "eslint --fix"
     ],
     "*.md": [
-      "prettier --write"
+      "eslint --fix"
     ]
   }
 }

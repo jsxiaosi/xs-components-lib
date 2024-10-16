@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { computed, ref } from 'vue';
   import { useClipboard } from '@vueuse/core';
+  import { computed, ref } from 'vue';
   import Example from './v-example.vue';
   import SourceCode from './v-source-code.vue';
   import VTransition from './v-transition.vue';

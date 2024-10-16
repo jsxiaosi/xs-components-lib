@@ -3,7 +3,7 @@
 
   let seed = 0;
   function getUuid() {
-    return 'message_' + seed++;
+    return `message_${seed++}`;
   }
 
   const messages = ref<{ name: string; type: string; content: string }[]>([]);
@@ -42,7 +42,8 @@
     <div
       v-for="item in messages"
       :key="item.name"
-      :class="['demoblock-message', item.type ? `demoblock-message-${item.type}` : '']"
+      class="demoblock-message"
+      :class="[item.type ? `demoblock-message-${item.type}` : '']"
     >
       <div class="demoblock-message-content">{{ item.content }}</div>
     </div>

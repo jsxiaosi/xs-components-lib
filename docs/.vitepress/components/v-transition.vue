@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { RendererElement } from '@vue/runtime-core';
+  import type { RendererElement } from 'vue';
 
   const on = {
     beforeEnter(el: RendererElement) {

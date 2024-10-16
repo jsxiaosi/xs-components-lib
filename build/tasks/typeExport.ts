@@ -1,15 +1,15 @@
-import process from 'process';
-import path from 'path';
 import { mkdir, readFile } from 'fs/promises';
-import consola from 'consola';
-import * as vueCompiler from 'vue/compiler-sfc';
-import glob from 'fast-glob';
+import path from 'path';
+import process from 'process';
 import chalk from 'chalk';
+import consola from 'consola';
+import glob from 'fast-glob';
 import { Project } from 'ts-morph';
+import * as vueCompiler from 'vue/compiler-sfc';
 
 import type { CompilerOptions, SourceFile } from 'ts-morph';
 // import { copyFile } from 'fs-extra';
-import { buildOutput, epRoot, pkgRoot, projRoot, PKG_NAME } from '../utils/paths';
+import { buildOutput, epRoot, PKG_NAME, pkgRoot, projRoot } from '../utils/paths';
 import { excludeFiles } from './buildModules';
 
 const TSCONFIG_PATH = path.resolve(projRoot, 'tsconfig.web.json');
@@ -43,7 +43,7 @@ export const generateTypesDefinitions = async () => {
     emitOnlyDtsFiles: true,
   });
 
-  const tasks = sourceFiles.map(async (sourceFile) => {
+  const tasks = sourceFiles.map(async sourceFile => {
     const relativePath = path.relative(pkgRoot, sourceFile.getFilePath());
 
     consola.trace(chalk.yellow(`Generating definition for file: ${chalk.bold(relativePath)}`));
@@ -54,7 +54,7 @@ export const generateTypesDefinitions = async () => {
       throw new Error(`Emit no file: ${chalk.bold(relativePath)}`);
     }
 
-    const subTasks = emitFiles.map(async (outputFile) => {
+    const subTasks = emitFiles.map(async outputFile => {
       const filepath = outputFile.getFilePath();
 
       await mkdir(path.dirname(filepath), {
@@ -88,7 +88,7 @@ async function addSourceFiles(project: Project) {
 
   const sourceFiles: SourceFile[] = [];
   await Promise.all([
-    ...filePaths.map(async (file) => {
+    ...filePaths.map(async file => {
       if (file.endsWith('.vue')) {
         const content = await readFile(file, 'utf-8');
         const hasTsNoCheck = content.includes('@ts-nocheck');
@@ -106,10 +106,7 @@ async function addSourceFiles(project: Project) {
           }
 
           const lang = scriptSetup?.lang || script?.lang || 'js';
-          const sourceFile = project.createSourceFile(
-            `${path.relative(process.cwd(), file)}.${lang}`,
-            content,
-          );
+          const sourceFile = project.createSourceFile(`${path.relative(process.cwd(), file)}.${lang}`, content);
           sourceFiles.push(sourceFile);
         }
       } else {
@@ -117,7 +114,7 @@ async function addSourceFiles(project: Project) {
         sourceFiles.push(sourceFile);
       }
     }),
-    ...epPaths.map(async (file) => {
+    ...epPaths.map(async file => {
       const content = await readFile(path.resolve(epRoot, file), 'utf-8');
       sourceFiles.push(project.createSourceFile(path.resolve(pkgRoot, file), content));
     }),
