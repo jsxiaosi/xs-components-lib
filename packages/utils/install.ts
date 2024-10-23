@@ -3,7 +3,7 @@ import type { SFCWithInstall } from '../types';
 
 // 注册组件
 export const withInstall = <T>(main: T) => {
-  (main as SFCWithInstall<T>).install = (app): void => {
+  (main as SFCWithInstall<T>).install = (app: App): void => {
     const comp: Record<string, any> = main as Record<string, any>;
     app.component(comp.name, comp);
   };

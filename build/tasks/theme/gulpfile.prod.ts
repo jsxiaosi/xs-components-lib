@@ -15,7 +15,7 @@ const sass = gulpSass(dartSass);
 // 编译 SASS
 const compile = () =>
   src(path.resolve(__dirname, `${config.input}/*.scss`))
-    .pipe(sass())
+    .pipe(sass.sync())
     .pipe(
       autoprefixer({
         cascade: false,

@@ -22,7 +22,7 @@ export async function buildGlobalTypeFile() {
   console.log('componentDeclarations', componentDeclarations);
   const content = `
 // GlobalComponents for Volar
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   export interface GlobalComponents {
     ${componentDeclarations}
   }

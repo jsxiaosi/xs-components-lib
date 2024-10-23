@@ -5,8 +5,8 @@
     "paths": {
       "@xs-components/*": ["../packages/*"]
     },
-    "types": ["vite/client"]
+    "types": ["vite/client", "./global.d.ts"]
   },
-  "include": ["**/*", "typings/vue-shim.d.ts"],
+  "include": ["**/*", "typings/vue-shim.d.ts", "global.d.ts"],
   "exclude": ["lib", "build"]
 }

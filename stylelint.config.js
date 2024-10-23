@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   root: true,
   extends: ['stylelint-config-standard', 'stylelint-config-property-sort-order-smacss'],
   plugins: ['stylelint-order'],
