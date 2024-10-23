@@ -1,5 +1,6 @@
 {
   "name": "xs-components",
+  "type": "module",
   "version": "1.0.6",
   "workspaces": [
     "packages",
@@ -27,6 +28,7 @@
     "docs:serve": "pnpm run -C docs serve",
     "build": "pnpm run -C build build",
     "lint:eslint": "eslint . --fix",
+    "lint:prettier": "prettier . --write",
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:staged": "lint-staged",
     "cz": "czg",
@@ -39,8 +41,9 @@
   },
   "devDependencies": {
     "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@jsxiaosi/commitlint-config": "^1.0.2",
-    "@jsxiaosi/eslint-config": "^1.0.2",
+    "@jsxiaosi/commitlint-config": "^1.0.5",
+    "@jsxiaosi/eslint-config": "^1.0.5",
+    "@jsxiaosi/eslint-config-prettier": "^1.0.5",
     "@types/node": "*",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
@@ -100,24 +103,26 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
     "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-      "eslint --fix"
+      "prettier --write--parser json"
     ],
     "package.json": [
-      "eslint --fix"
+      "prettier --write"
     ],
     "*.vue": [
       "eslint --fix",
+      "prettier --write",
       "stylelint --fix"
     ],
     "*.{scss,less,styl,html}": [
       "stylelint --fix",
-      "eslint --fix"
+      "prettier --write"
     ],
     "*.md": [
-      "eslint --fix"
+      "prettier --write"
     ]
   }
 }
