@@ -19,6 +19,7 @@
     组件实例：
     <i-button @click="add">按钮</i-button>
     {{ num }}
+    test
   </div>
 </template>
 
