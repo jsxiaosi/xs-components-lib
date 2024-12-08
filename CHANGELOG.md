@@ -1,5 +1,21 @@
+## <small>1.0.7 (2024-12-08)</small>
+
+* feat(github): ✨ changelogithub GitHub自动生成版本日志 ([86201f6](https://github.com/jsxiaosi/xs-components-lib/commit/86201f6))
+* feat(package): ✨ eslint ([aff388d](https://github.com/jsxiaosi/xs-components-lib/commit/aff388d))
+* build(build,docs,effect): 📦️ package ([0d020e4](https://github.com/jsxiaosi/xs-components-lib/commit/0d020e4))
+* build(build,docs,effect): 📦️ package ([9e0043f](https://github.com/jsxiaosi/xs-components-lib/commit/9e0043f))
+* build(buld,docs,effect): 📦️ 更新依赖 ([197e9ad](https://github.com/jsxiaosi/xs-components-lib/commit/197e9ad))
+* fix(.husky): 🐛 husky预设 ([8cca451](https://github.com/jsxiaosi/xs-components-lib/commit/8cca451))
+* fix(.husky): 🐛 husky预设 ([87718a1](https://github.com/jsxiaosi/xs-components-lib/commit/87718a1))
+* fix(package): 🐛 husky ([44dbcae](https://github.com/jsxiaosi/xs-components-lib/commit/44dbcae))
+* build(prettier): 📦️ prettier 依赖配置 ([5a50f13](https://github.com/jsxiaosi/xs-components-lib/commit/5a50f13))
+* wip(build): 🚀 gulp ([e3d264b](https://github.com/jsxiaosi/xs-components-lib/commit/e3d264b))
+
+
+
 ## <small>1.0.6 (2024-03-23)</small>
 
+* feat: ✨ v1.0.6 ([fdd1b1f](https://github.com/jsxiaosi/xs-components-lib/commit/fdd1b1f))
 * build(docs): 📦️ vitepress ([9d632b6](https://github.com/jsxiaosi/xs-components-lib/commit/9d632b6))
 
 
