@@ -16,19 +16,19 @@
     "@types/gulp-clean-css": "^4.3.4",
     "@types/gulp-postcss": "^8.0.6",
     "@types/gulp-sass": "^5.0.4",
-    "@vitejs/plugin-vue": "^5.1.4",
-    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
     "del": "^8.0.0",
     "esbuild": "^0.24.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^10.0.0",
-    "gulp-sass": "^5.1.0",
-    "rollup": "^4.24.0",
+    "gulp-sass": "^6.0.0",
+    "rollup": "^4.28.1",
     "rollup-plugin-esbuild": "^6.1.1",
     "rollup-plugin-terser": "^7.0.2",
     "ts-morph": "^24.0.0",
-    "tsx": "^4.19.1"
+    "tsx": "^4.19.2"
   }
 }
