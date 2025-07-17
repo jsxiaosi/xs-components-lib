@@ -1,5 +1,13 @@
+## <small>1.0.8 (2025-07-17)</small>
+
+* build: 📦️ commitlint cjs配置改成esm ([8a0d570](https://github.com/jsxiaosi/xs-components-lib/commit/8a0d570))
+* build(buld,docs,effect): 📦️ 更新依赖 ([596c732](https://github.com/jsxiaosi/xs-components-lib/commit/596c732))
+
+
+
 ## <small>1.0.7 (2024-12-08)</small>
 
+* chore: 🔨 release v1.0.7 ([59d2b32](https://github.com/jsxiaosi/xs-components-lib/commit/59d2b32))
 * feat(github): ✨ changelogithub GitHub自动生成版本日志 ([86201f6](https://github.com/jsxiaosi/xs-components-lib/commit/86201f6))
 * feat(package): ✨ eslint ([aff388d](https://github.com/jsxiaosi/xs-components-lib/commit/aff388d))
 * build(build,docs,effect): 📦️ package ([0d020e4](https://github.com/jsxiaosi/xs-components-lib/commit/0d020e4))
