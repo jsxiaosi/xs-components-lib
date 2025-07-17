@@ -1,9 +1,8 @@
-const { execSync } = require('child_process');
-// CommonJS
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-const scopes = fs.readdirSync(path.resolve(__dirname, 'packages'));
+const scopes = fs.readdirSync(path.resolve('./packages'));
 
 const gitStatus = execSync('git status --porcelain || true').toString().trim().split('\n');
 
@@ -17,11 +16,11 @@ const subjectComplete = gitStatus
   ?.replace(/\//g, '%%')
   ?.match(/packages%%((\w|-)*)/)?.[1];
 
-module.exports = {
+export const Configuration = {
   extends: ['@jsxiaosi/commitlint-config'],
   prompt: {
     // 范围设置
-    scopes: [...scopes, 'mock'],
+    scopes: [...scopes],
     // 范围是否可以多选
     enableMultipleScopes: true,
     // 多选范围后用标识符隔开
@@ -34,3 +33,5 @@ module.exports = {
     defaultSubject: subjectComplete && `[${subjectComplete}] `,
   },
 };
+
+export default Configuration;

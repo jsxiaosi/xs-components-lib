@@ -48,6 +48,7 @@
     "@vitest/coverage-c8": "^0.32.2",
     "@vue/test-utils": "^2.4.6",
     "chalk": "^5.4.1",
+    "commitlint": "^19.8.1",
     "consola": "^3.4.2",
     "conventional-changelog-cli": "^5.0.0",
     "czg": "^1.12.0",
