@@ -4,7 +4,7 @@
     "target": "ESNext",
     "lib": ["WebWorker", "DOM"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "paths": {
       "@xs-components/*": ["../packages/"],
       "@/*": ["./.vitepress/"]

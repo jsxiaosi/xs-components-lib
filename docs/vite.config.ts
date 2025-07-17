@@ -8,11 +8,7 @@ import { MarkdownTransform } from './.vitepress/plugins/markdown-transform';
 export default defineConfig({
   base: 'comdocs',
   css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler',
-      },
-    },
+    preprocessorOptions: {},
   },
   resolve: {
     alias: [

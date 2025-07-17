@@ -7,11 +7,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [vue(), vueJsx()],
   css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler',
-      },
-    },
+    preprocessorOptions: {},
   },
   server: {
     // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"

@@ -1,11 +1,11 @@
 <script setup lang="ts">
   import { useClipboard } from '@vueuse/core';
   import { computed, ref } from 'vue';
+  // import VIcon from './v-icon.vue';
+  import message from './message';
   import Example from './v-example.vue';
   import SourceCode from './v-source-code.vue';
   import VTransition from './v-transition.vue';
-  // import VIcon from './v-icon.vue';
-  import message from './message';
 
   const props = defineProps<{
     demos: Object;

@@ -6,7 +6,7 @@
     "noLib": false,
     "experimentalDecorators": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "strict": true,
     "strictFunctionTypes": false,
