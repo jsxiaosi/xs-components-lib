@@ -41,7 +41,7 @@ COM_NAME=$HANDLE_NAME
 # 生成文件.vue 并写入模板
 cat > $FILENAME/src/${NAME}.vue <<EOF
 <script lang="ts" setup>
-  import { ${COM_NAME}Props } from './icon-admin';
+  import { ${COM_NAME}Props } from './${NAME}';
   defineProps(${COM_NAME}Props);
   defineOptions({
     name: '${PREFIX_NAME}${COM_NAME}',
@@ -58,7 +58,7 @@ EOF
 # 生成类型文件
 cat > $FILENAME/src/${NAME}.ts <<EOF
 import type { ExtractPropTypes } from 'vue';
-import type ${COM_NAME} from './icon-admin.vue';
+import type ${COM_NAME} from './${NAME}.vue';
 
 export const ${COM_NAME}Props = {};
 
